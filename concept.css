@@ -1,0 +1,583 @@
+/* =========================================================
+   MENA MEH! Studio — "Bello non basta."
+   Concept editoriale alternativo alla landing standard.
+   ========================================================= */
+
+:root {
+  /* Colore */
+  --color-bg: #0d0d0d;
+  --color-text: #f7f5f2;
+  --color-text-muted: #a79f97;
+  --color-accent: #61d90b;
+  --color-accent-contrast: #0d0d0d;
+  --color-border-strong: rgba(247, 245, 242, 0.4);
+
+  /* Tipografia */
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  /* NOTA: "roc-grotesk" non è presente in assets/fonts/ né caricato via
+     servizio esterno. La regola è pronta: appena il webfont sarà
+     disponibile (file locali + @font-face, o un kit esterno), verrà
+     usato automaticamente al posto del fallback di sistema. */
+  --font-display: "roc-grotesk", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-mono: ui-monospace, "SF Mono", "Cascadia Code", "Roboto Mono", Consolas,
+    monospace;
+
+  --gutter: clamp(20px, 4.5vw, 56px);
+  --ease: cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-fast: 220ms var(--ease);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: inherit;
+}
+
+/* ---------- Accessibilità ---------- */
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: var(--gutter);
+  z-index: 100;
+  padding: 12px 20px;
+  background: var(--color-accent);
+  color: var(--color-accent-contrast);
+  font-weight: 700;
+  text-decoration: none;
+  border-radius: 3px;
+  transition: top var(--transition-fast);
+}
+
+.skip-link:focus {
+  top: 16px;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 4px;
+}
+
+/* ---------- Stage (schermata unica, manifesto) ---------- */
+.stage {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  min-height: 100svh;
+  min-height: 100dvh;
+  overflow: hidden;
+}
+
+.stage__media {
+  position: absolute;
+  inset: 0;
+  background-image: url("assets/images/image/hero-background-green-accent.jpg");
+  background-size: cover;
+  background-position: 78% 28%;
+  filter: contrast(1.15) brightness(0.92);
+  transform: scale(1.02);
+  animation: mediaDrift 30s var(--ease) infinite alternate;
+}
+
+@keyframes mediaDrift {
+  from { transform: scale(1.02) translate3d(0, 0, 0); }
+  to { transform: scale(1.09) translate3d(-1%, -1%, 0); }
+}
+
+.stage__scrim {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(0deg, rgba(6, 5, 5, 0.85) 0%, rgba(6, 5, 5, 0.15) 38%, rgba(6, 5, 5, 0.55) 100%),
+    linear-gradient(100deg, rgba(6, 5, 5, 0.92) 0%, rgba(6, 5, 5, 0.35) 46%, rgba(6, 5, 5, 0.05) 78%);
+}
+
+/* ---------- Header ---------- */
+.stage__header {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  padding: var(--gutter) var(--gutter) 0;
+}
+
+.brand {
+  display: inline-flex;
+  text-decoration: none;
+  line-height: 0;
+  opacity: 0;
+  animation: fadeIn 600ms var(--ease) 80ms forwards;
+}
+
+.brand__logo {
+  width: clamp(216px, 19.8vw, 270px);
+  height: auto;
+  /* Il file sorgente del logo ha il tracciato in nero: viene forzato in
+     bianco via filtro per garantire contrasto sullo sfondo scuro, senza
+     modificare l'asset originale. */
+  filter: brightness(0) invert(1);
+}
+
+.kicker {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0;
+  color: var(--color-text-muted);
+  font-family: var(--font-display);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  opacity: 0;
+  animation: fadeIn 600ms var(--ease) 200ms forwards;
+}
+
+.kicker__accent {
+  color: var(--color-accent);
+}
+
+.kicker__dot {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--color-accent);
+  animation: pulse 2.4s ease-in-out infinite;
+  flex-shrink: 0;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.35; transform: scale(0.7); }
+}
+
+/* ---------- Etichetta verticale ---------- */
+.tag-vertical {
+  position: absolute;
+  right: clamp(14px, 2.4vw, 28px);
+  top: 50%;
+  z-index: 3;
+  transform: translateY(-50%) rotate(180deg);
+  writing-mode: vertical-rl;
+  color: var(--color-text-muted);
+  font-family: var(--font-display);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+/* ---------- Contenuto principale ---------- */
+.stage__main {
+  position: relative;
+  z-index: 2;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 24px var(--gutter) 8px;
+}
+
+.headline {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  font-family: var(--font-display);
+  font-size: clamp(3.6rem, 1.6rem + 11vw, 10.5rem);
+  font-weight: 800;
+  font-style: normal;
+  line-height: 0.86;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+}
+
+.headline__word {
+  display: inline-block;
+  width: fit-content;
+}
+
+.headline__word--bello {
+  color: var(--color-text);
+  -webkit-text-stroke: 2px var(--color-text);
+  opacity: 0;
+  animation: fadeIn 700ms var(--ease) 260ms forwards;
+  will-change: transform;
+  transition: color 380ms ease, -webkit-text-stroke-color 380ms ease;
+}
+
+@supports (-webkit-text-stroke: 1px #000) {
+  .headline__word--bello {
+    color: transparent;
+  }
+}
+
+.headline__word--bello.is-active {
+  color: var(--color-accent);
+  -webkit-text-stroke-color: var(--color-accent);
+}
+
+.headline__word--basta {
+  opacity: 0;
+  animation: fadeIn 700ms var(--ease) 420ms forwards;
+}
+
+.headline__highlight {
+  display: inline-block;
+  color: var(--color-text);
+}
+
+/* ---------- Testo e azioni ---------- */
+.stage__foot {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 28px;
+  margin-top: 28px;
+}
+
+.lede {
+  margin: 0;
+  max-width: 40ch;
+  color: var(--color-text-muted);
+  font-size: clamp(0.95rem, 0.85rem + 0.4vw, 1.1rem);
+  line-height: 1.55;
+  opacity: 0;
+  animation: fadeIn 700ms var(--ease) 560ms forwards;
+}
+
+.actions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 14px;
+  opacity: 0;
+  animation: fadeIn 700ms var(--ease) 680ms forwards;
+}
+
+.cta {
+  position: relative;
+  isolation: isolate;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 15px 26px;
+  border: 1px solid var(--color-border-strong);
+  border-radius: 999px;
+  color: var(--color-text);
+  font-family: var(--font-display);
+  font-size: clamp(0.95rem, 0.85rem + 0.3vw, 1.05rem);
+  font-weight: 700;
+  font-style: normal;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: color var(--transition-fast), border-color var(--transition-fast);
+}
+
+.cta__pill {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: var(--color-accent);
+  border-radius: inherit;
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform 380ms var(--ease);
+}
+
+.cta:hover,
+.cta:focus-visible {
+  color: var(--color-accent-contrast);
+  border-color: var(--color-accent);
+}
+
+.cta:hover .cta__pill,
+.cta:focus-visible .cta__pill {
+  transform: scaleX(1);
+}
+
+.cta__arrow {
+  transition: transform var(--transition-fast);
+}
+
+.cta:hover .cta__arrow,
+.cta:focus-visible .cta__arrow {
+  transform: translateX(5px);
+}
+
+.cta:active {
+  transform: translateY(1px);
+}
+
+.ig-link {
+  padding: 4px 2px;
+  color: var(--color-text-muted);
+  font-family: var(--font-display);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-decoration: underline;
+  text-decoration-color: rgba(247, 245, 242, 0.35);
+  text-underline-offset: 4px;
+  transition: color var(--transition-fast), text-decoration-color var(--transition-fast);
+}
+
+.ig-link:hover,
+.ig-link:focus-visible {
+  color: var(--color-accent);
+  text-decoration-color: var(--color-accent);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ---------- Firma ---------- */
+.stage__signature {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 18px var(--gutter) 20px;
+}
+
+.stage__signature-brand {
+  margin: 0;
+  color: var(--color-text);
+  font-family: var(--font-display);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+}
+
+.stage__signature-tag {
+  margin-left: 10px;
+  color: var(--color-text-muted);
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  text-transform: none;
+}
+
+.index-tag {
+  margin: 0;
+  color: var(--color-text-muted);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  opacity: 0.6;
+}
+
+/* ---------- Breakpoints ---------- */
+
+@media (max-width: 1024px) {
+  .stage__media {
+    background-position: 82% 24%;
+  }
+}
+
+@media (max-width: 768px) {
+  .headline {
+    font-size: clamp(3.1rem, 1.4rem + 12vw, 6rem);
+  }
+
+  .stage__media {
+    background-position: 74% 18%;
+  }
+
+  .tag-vertical {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  /* Sotto i 600px il contenuto resta nel normale flusso del documento
+     (header → main → firma), senza posizionamenti assoluti né altezze
+     fisse. Tutti gli spazi verticali (padding, gap, margini) sono
+     espressi con clamp() legati a dvh/vw: si riducono in automatico
+     sugli schermi bassi e crescono, entro un limite, su quelli alti —
+     niente più salto netto legato a un singolo breakpoint o a un
+     valore in px fisso. */
+
+  .stage__header {
+    padding: clamp(16px, 4dvh, 28px) clamp(16px, 5vw, 24px) 0;
+    gap: clamp(10px, 1.8dvh, 16px);
+  }
+
+  .stage__main {
+    /* flex: 1 (ereditato) fa sì che il main occupi lo spazio libero
+       tra header e firma; "space-evenly" distribuisce l'eventuale
+       eccesso in tre punti (sopra il titolo, tra titolo e testo/CTA,
+       sotto Instagram) invece di concentrarlo in un unico blocco
+       ridosso alla firma, come accadeva con flex-end/flex-start o
+       con una semplice centratura. */
+    justify-content: space-evenly;
+    padding: clamp(20px, 4dvh, 36px) clamp(16px, 5vw, 24px) clamp(6px, 1dvh, 10px);
+  }
+
+  .headline {
+    font-size: clamp(2.6rem, 1.2rem + 15vw, 4.4rem);
+    line-height: 0.92;
+  }
+
+  .stage__foot {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: clamp(14px, 2.4dvh, 22px);
+    margin-top: clamp(18px, 3.2dvh, 32px);
+  }
+
+  .lede {
+    max-width: 100%;
+  }
+
+  .actions {
+    width: 100%;
+    gap: clamp(10px, 1.6dvh, 16px);
+  }
+
+  .cta {
+    width: 100%;
+    justify-content: center;
+    gap: clamp(8px, 1.6vw, 12px);
+    /* Testo più lungo ("Diventa inconfondibile") su schermi stretti:
+       riduzione moderata e fluida di dimensione e tracking, senza
+       toccare padding, bordo o animazioni del pulsante. */
+    font-size: clamp(0.78rem, 0.586rem + 0.97vw, 0.95rem);
+    letter-spacing: clamp(0.02em, -0.003em + 0.0072vw, 0.04em);
+  }
+
+  .cta__label {
+    white-space: nowrap;
+  }
+
+  .stage__signature {
+    padding:
+      clamp(14px, 2.6dvh, 20px)
+      clamp(16px, 5vw, 24px)
+      max(14px, env(safe-area-inset-bottom));
+  }
+
+  .stage__signature-tag {
+    display: block;
+    margin-left: 0;
+    margin-top: 2px;
+  }
+
+  .stage__media {
+    /* Il segno grafico verde è parte dell'immagine di sfondo (non un
+       elemento separato): lo si porta più in alto in modo fluido
+       così da restare "in composizione" senza invadere l'area del
+       testo, anziché restare ancorato a una coordinata fissa. */
+    background-position: 74% clamp(12%, 8dvh, 24%);
+  }
+}
+
+/* Ulteriore compattazione SOLO in base all'altezza disponibile (mai
+   legata a modelli di telefono specifici): sugli schermi bassi si
+   riducono ancora un po' padding, gap, titolo, CTA e posizione dello
+   sfondo, mantenendo tutto nel flusso e senza mai tagliare testo o
+   firma — se lo spazio non basta comunque, la pagina scorre. */
+@media (max-width: 600px) and (max-height: 700px) {
+  .stage__header {
+    padding-top: clamp(12px, 2.6dvh, 18px);
+    gap: clamp(8px, 1.4dvh, 12px);
+  }
+
+  .stage__main {
+    padding-top: clamp(14px, 2.6dvh, 22px);
+  }
+
+  .headline {
+    font-size: clamp(2.3rem, 1rem + 13vw, 3.6rem);
+    line-height: 0.9;
+  }
+
+  .stage__foot {
+    gap: clamp(12px, 2dvh, 16px);
+    margin-top: clamp(14px, 2.4dvh, 20px);
+  }
+
+  .cta {
+    padding-top: clamp(12px, 1.6dvh, 15px);
+    padding-bottom: clamp(12px, 1.6dvh, 15px);
+  }
+
+  .stage__signature {
+    padding-top: clamp(10px, 1.8dvh, 14px);
+    padding-bottom: max(10px, env(safe-area-inset-bottom));
+  }
+
+  .stage__media {
+    background-position: 74% clamp(8%, 5dvh, 16%);
+  }
+}
+
+/* ---------- Movimento ridotto / touch ---------- */
+@media (prefers-reduced-motion: reduce) {
+  .stage__media {
+    animation: none;
+    transform: scale(1);
+  }
+
+  .brand,
+  .kicker,
+  .headline__word--bello,
+  .headline__word--basta,
+  .lede,
+  .actions {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+
+  .kicker__dot {
+    animation: none;
+  }
+
+  .headline__word--bello {
+    transform: none !important;
+  }
+}
+
+@media (hover: none) {
+  .headline__word--bello {
+    transition: none;
+  }
+}

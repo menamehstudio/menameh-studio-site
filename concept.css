@@ -228,35 +228,50 @@ button:focus-visible {
 }
 
 .headline__word--bello {
-  color: var(--color-text);
-  /* Lo spessore del contorno è espresso con clamp() legato alla larghezza
-     del viewport, non con un valore fisso: un tratto fisso a 2px, applicato
-     a un titolo la cui dimensione si riduce parecchio su mobile (clamp()
-     sull'headline), diventa proporzionalmente molto più spesso rispetto
-     alle aste della lettera. Sulla "B" — l'unica lettera di "BELLO" con
-     due occhielli chiusi e ravvicinati — questo può "intasare" gli occhielli
-     e farla apparire deformata su alcuni browser/dispositivi mobili,
-     mentre "E" ed "L" (senza occhielli) e la "O" (un solo occhiello ampio)
-     restano leggibili. A larghezze ≥ 571px il risultato è invariato: 2px,
-     identico all'effetto grafico desktop già approvato.
-     Vedi anche l'override mobile di will-change più sotto. */
-  -webkit-text-stroke-width: clamp(1px, 0.35vw, 2px);
-  -webkit-text-stroke-color: var(--color-text);
+  /* "BELLO" non è più testo HTML: è un SVG inline con veri tracciati
+     <path> (contorni del font Roboto Black, vedi generate_bello_svg.py),
+     per eliminare in modo definitivo e indipendente dal browser il difetto
+     di rendering che affliggeva "-webkit-text-stroke" su Safari/macOS
+     (doppio contorno leggermente disallineato sulla "B"): un vettore
+     disegnato con <path> non dipende dal motore di text-rendering né da
+     compositing/layer GPU del browser.
+     - width: stessa larghezza tipografica del testo originale (somma degli
+       avanzamenti dei glifi B-E-L-L-O con letter-spacing:-0.03em, espressa
+       in em così resta legata a font-size ed è quindi comunque "responsive");
+     - height:auto: il rapporto intrinseco dell'SVG (dal viewBox) è 0.86,
+       identico al line-height:0.86 di .headline — stesso ingombro verticale
+       del testo originale, quindi stessa distanza da "NON BASTA."; viene
+       sovrascritto in em nei due breakpoint qui sotto in cui .headline
+       cambia line-height, per restare identico in ogni caso. */
+  display: inline-block;
+  width: 2.8595em;
+  height: auto;
+  overflow: visible;
   opacity: 0;
-  animation: fadeIn 700ms var(--ease) 260ms forwards;
-  will-change: transform;
-  transition: color 380ms ease, -webkit-text-stroke-color 380ms ease;
+  animation: fadeInOpacity 700ms var(--ease) 260ms forwards;
 }
 
-@supports (-webkit-text-stroke: 1px #000) {
-  .headline__word--bello {
-    color: transparent;
-  }
+.headline__word--bello path {
+  /* Stato normale: interno trasparente, contorno nel verde del brand su
+     tutte le lettere B-E-L-L-O (in precedenza il contorno era nel colore
+     testo/bianco; ora è var(--color-accent) su tutta la parola, identico
+     su desktop e mobile). vector-effect: non-scaling-stroke rende lo
+     spessore dello stroke indipendente dallo scaling interno dell'SVG
+     (proprio come lo era da -webkit-text-stroke rispetto al font-size),
+     così lo stesso clamp() "fluido" già approvato per lo spessore resta
+     valido invariato. */
+  fill: transparent;
+  stroke: var(--color-accent);
+  stroke-width: clamp(1px, 0.35vw, 2px);
+  stroke-linejoin: round;
+  stroke-linecap: round;
+  vector-effect: non-scaling-stroke;
+  transition: fill 380ms ease, stroke 380ms ease;
 }
 
-.headline__word--bello.is-active {
-  color: var(--color-accent);
-  -webkit-text-stroke-color: var(--color-accent);
+.headline__word--bello.is-active path {
+  fill: var(--color-accent);
+  stroke: var(--color-accent);
 }
 
 .headline__word--basta {
@@ -377,6 +392,13 @@ button:focus-visible {
   to { opacity: 1; transform: translateY(0); }
 }
 
+/* Usata solo da .headline__word--bello: nessuna trasformazione, per
+   evitare qualunque promozione a layer GPU su questo elemento. */
+@keyframes fadeInOpacity {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
 /* ---------- Firma ---------- */
 .stage__signature {
   position: relative;
@@ -468,13 +490,27 @@ button:focus-visible {
   }
 
   .headline__word--bello {
-    /* L'interazione magnetica via cursore è comunque disattivata su
-       touch/mobile in concept.js (hover:hover + pointer:fine), quindi
-       la promozione a livello GPU (will-change) qui non serve a nulla:
-       disattivarla evita che sia un fattore aggiuntivo nell'eventuale
-       artefatto di rendering della "B" descritto sopra, senza alcun
-       impatto visivo (nessuna animazione dipende da questo hint). */
-    will-change: auto;
+    /* Rispecchia il line-height:0.92 di .headline in questo breakpoint,
+       così l'ingombro verticale dell'SVG (e la distanza da "NON BASTA.")
+       resta identico a quello del testo originale anche qui. Dimensione,
+       posizione e allineamento restano quindi invariati: cambia soltanto
+       il trattamento grafico qui sotto. */
+    height: 0.92em;
+    /* Sotto i 600px "BELLO" resta comunque visibile fin da subito, senza
+       l'animazione di ingresso a opacità. */
+    opacity: 1;
+    animation: none;
+  }
+
+  .headline__word--bello path {
+    /* Sotto i 600px "BELLO" è completamente riempita di verde brand su
+       tutte le lettere B-E-L-L-O (non più solo contorno): fill e stroke
+       coincidono. Dichiarata dopo la regola desktop ".headline__word--bello
+       path" più in alto e con la stessa specificità di selettore (una
+       classe + un elemento): essendo successiva nel foglio di stile,
+       vince sempre in questo breakpoint senza bisogno di !important. */
+    fill: #61d90b;
+    stroke: #61d90b;
   }
 
   .stage__foot {
@@ -551,6 +587,12 @@ button:focus-visible {
     line-height: 0.9;
   }
 
+  .headline__word--bello {
+    /* Idem: rispecchia il line-height:0.9 di .headline in questo
+       breakpoint (schermi bassi). */
+    height: 0.9em;
+  }
+
   .stage__foot {
     gap: clamp(12px, 2dvh, 16px);
     margin-top: clamp(14px, 2.4dvh, 20px);
@@ -592,14 +634,10 @@ button:focus-visible {
   .kicker__dot {
     animation: none;
   }
-
-  .headline__word--bello {
-    transform: none !important;
-  }
 }
 
 @media (hover: none) {
-  .headline__word--bello {
+  .headline__word--bello path {
     transition: none;
   }
 }

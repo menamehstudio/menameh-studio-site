@@ -405,10 +405,28 @@ button:focus-visible {
   z-index: 3;
   display: flex;
   flex-wrap: wrap;
-  align-items: baseline;
+  /* align-items era "baseline": con l'aggiunta della riga legale il primo
+     elemento (.stage__signature-group) è diventato un blocco a due righe,
+     per cui "flex-end" (allineamento al bordo inferiore) riproduce con
+     maggiore affidabilità lo stesso rapporto visivo che c'era prima tra
+     la firma e "Index — 001 / 2026", evitando l'ambiguità della baseline
+     su un blocco multi-riga. */
+  align-items: flex-end;
   justify-content: space-between;
   gap: 12px;
   padding: 18px var(--gutter) 20px;
+}
+
+.stage__signature-group {
+  /* Raggruppa la firma del brand e la riga legale in un unico elemento
+     flex, così "Index — 001 / 2026" resta un secondo elemento distinto,
+     allineato al bordo destro/inferiore come prima — non si sovrappone
+     mai alla nuova riga legale, che sta sotto la firma nello stesso
+     gruppo. */
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
 }
 
 .stage__signature-brand {
@@ -426,6 +444,36 @@ button:focus-visible {
   font-weight: 500;
   letter-spacing: 0.02em;
   text-transform: none;
+}
+
+.legal-line {
+  /* Riga legale minima, volutamente secondaria: stessa famiglia e stesso
+     trattamento "fine print" di .index-tag (font-mono, colore muted,
+     opacità ridotta), dimensione molto contenuta ma leggibile. Nessun
+     posizionamento assoluto: fa parte del normale flusso del footer,
+     quindi non può mai sovrapporsi a "Index — 001 / 2026" (elemento
+     separato nello stesso .stage__signature) e va a capo in modo
+     ordinato come testo normale se lo spazio è insufficiente. */
+  margin: 0;
+  color: var(--color-text-muted);
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.03em;
+  opacity: 0.7;
+}
+
+.legal-line a {
+  color: var(--color-text-muted);
+  text-decoration: underline;
+  text-decoration-color: rgba(247, 245, 242, 0.35);
+  text-underline-offset: 2px;
+  transition: color var(--transition-fast), text-decoration-color var(--transition-fast);
+}
+
+.legal-line a:hover,
+.legal-line a:focus-visible {
+  color: var(--color-accent);
+  text-decoration-color: var(--color-accent);
 }
 
 .index-tag {

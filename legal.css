@@ -1,0 +1,267 @@
+/* =========================================================
+   legal.css — MENA MEH! Studio
+   Foglio di stile dedicato ESCLUSIVAMENTE a Privacy Policy e
+   Cookie Policy. Non è collegato/importato da concept.css e non lo
+   influenza in alcun modo: le due pagine legali sono completamente
+   indipendenti dalla landing "Bello non basta." a livello di stile.
+   Stessa palette e stesso linguaggio visivo della landing, replicati
+   qui come valori propri — nessun @import, nessuna libreria esterna,
+   nessun font caricato da terzi, nessun tracker, nessun cookie.
+   ========================================================= */
+
+:root {
+  --color-bg: #0d0d0d;
+  --color-text: #f7f5f2;
+  --color-text-muted: #a79f97;
+  --color-accent: #61d90b;
+  --color-accent-contrast: #0d0d0d;
+  --color-border: rgba(247, 245, 242, 0.14);
+
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  --font-mono: ui-monospace, "SF Mono", "Cascadia Code", "Roboto Mono", Consolas,
+    monospace;
+
+  --gutter: clamp(20px, 5vw, 56px);
+  --ease: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-sans);
+  line-height: 1.65;
+}
+
+a {
+  color: inherit;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 4px;
+}
+
+/* ---------- Accessibilità ---------- */
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: var(--gutter);
+  z-index: 100;
+  padding: 12px 20px;
+  background: var(--color-accent);
+  color: var(--color-accent-contrast);
+  font-weight: 700;
+  text-decoration: none;
+  border-radius: 3px;
+  transition: top 220ms var(--ease);
+}
+
+.skip-link:focus {
+  top: 16px;
+}
+
+/* ---------- Intestazione ---------- */
+.legal-header {
+  padding: clamp(20px, 4vw, 40px) var(--gutter) 0;
+}
+
+.legal-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--color-text-muted);
+  font-family: var(--font-mono);
+  font-size: 13px;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(247, 245, 242, 0.3);
+  padding-bottom: 2px;
+  transition: color 220ms var(--ease), border-color 220ms var(--ease);
+}
+
+.legal-back:hover,
+.legal-back:focus-visible {
+  color: var(--color-accent);
+  border-color: var(--color-accent);
+}
+
+/* ---------- Contenuto ---------- */
+.legal-main {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: clamp(24px, 5vw, 48px) var(--gutter) clamp(60px, 10vw, 100px);
+}
+
+.legal-kicker {
+  margin: 0 0 10px;
+  color: var(--color-accent);
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.legal-main h1 {
+  margin: 0 0 10px;
+  font-family: var(--font-sans);
+  font-size: clamp(2rem, 1.6rem + 1.8vw, 2.75rem);
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  line-height: 1.1;
+}
+
+.legal-updated {
+  margin: 0 0 36px;
+  color: var(--color-text-muted);
+  font-family: var(--font-mono);
+  font-size: 13px;
+  letter-spacing: 0.02em;
+}
+
+/* ---------- Indice ---------- */
+.legal-toc {
+  margin: 0 0 44px;
+  padding: clamp(16px, 3vw, 24px);
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+}
+
+.legal-toc p {
+  margin: 0 0 12px;
+  color: var(--color-text-muted);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.legal-toc ol {
+  margin: 0;
+  padding-left: 1.15em;
+  display: grid;
+  gap: 9px;
+  font-size: 14px;
+}
+
+.legal-toc a {
+  color: var(--color-text-muted);
+  text-decoration: underline;
+  text-decoration-color: rgba(247, 245, 242, 0.3);
+  text-underline-offset: 3px;
+  transition: color 220ms var(--ease), text-decoration-color 220ms var(--ease);
+}
+
+.legal-toc a:hover,
+.legal-toc a:focus-visible {
+  color: var(--color-accent);
+  text-decoration-color: var(--color-accent);
+}
+
+/* ---------- Sezioni ---------- */
+.legal-main section {
+  margin: 0 0 40px;
+  padding-top: 28px;
+  border-top: 1px solid var(--color-border);
+  scroll-margin-top: 20px;
+}
+
+.legal-main section:first-of-type {
+  border-top: none;
+  padding-top: 0;
+}
+
+.legal-main h2 {
+  margin: 0 0 14px;
+  color: var(--color-text);
+  font-family: var(--font-sans);
+  font-size: clamp(1.1rem, 1rem + 0.5vw, 1.35rem);
+  font-weight: 700;
+  letter-spacing: -0.005em;
+}
+
+.legal-main p {
+  margin: 0 0 14px;
+  color: var(--color-text);
+  font-size: 15px;
+}
+
+.legal-main p:last-child {
+  margin-bottom: 0;
+}
+
+.legal-main ul {
+  margin: 0 0 14px;
+  padding-left: 1.2em;
+}
+
+.legal-main ul:last-child {
+  margin-bottom: 0;
+}
+
+.legal-main li {
+  margin-bottom: 8px;
+  font-size: 15px;
+}
+
+.legal-main li:last-child {
+  margin-bottom: 0;
+}
+
+.legal-main a {
+  color: var(--color-text);
+  text-decoration: underline;
+  text-decoration-color: rgba(247, 245, 242, 0.35);
+  text-underline-offset: 3px;
+  transition: color 220ms var(--ease), text-decoration-color 220ms var(--ease);
+}
+
+.legal-main a:hover,
+.legal-main a:focus-visible {
+  color: var(--color-accent);
+  text-decoration-color: var(--color-accent);
+}
+
+.legal-note {
+  margin: 0 0 40px;
+  padding: clamp(14px, 3vw, 20px);
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  color: var(--color-text-muted);
+  font-size: 14px;
+}
+
+.legal-note:last-of-type {
+  margin-bottom: 44px;
+}
+
+.legal-back-bottom {
+  margin: 0;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 600px) {
+  .legal-header,
+  .legal-main {
+    padding-left: clamp(16px, 5vw, 24px);
+    padding-right: clamp(16px, 5vw, 24px);
+  }
+
+  .legal-main h1 {
+    font-size: clamp(1.7rem, 1.3rem + 4vw, 2.2rem);
+  }
+}

@@ -229,7 +229,19 @@ button:focus-visible {
 
 .headline__word--bello {
   color: var(--color-text);
-  -webkit-text-stroke: 2px var(--color-text);
+  /* Lo spessore del contorno è espresso con clamp() legato alla larghezza
+     del viewport, non con un valore fisso: un tratto fisso a 2px, applicato
+     a un titolo la cui dimensione si riduce parecchio su mobile (clamp()
+     sull'headline), diventa proporzionalmente molto più spesso rispetto
+     alle aste della lettera. Sulla "B" — l'unica lettera di "BELLO" con
+     due occhielli chiusi e ravvicinati — questo può "intasare" gli occhielli
+     e farla apparire deformata su alcuni browser/dispositivi mobili,
+     mentre "E" ed "L" (senza occhielli) e la "O" (un solo occhiello ampio)
+     restano leggibili. A larghezze ≥ 571px il risultato è invariato: 2px,
+     identico all'effetto grafico desktop già approvato.
+     Vedi anche l'override mobile di will-change più sotto. */
+  -webkit-text-stroke-width: clamp(1px, 0.35vw, 2px);
+  -webkit-text-stroke-color: var(--color-text);
   opacity: 0;
   animation: fadeIn 700ms var(--ease) 260ms forwards;
   will-change: transform;
@@ -453,6 +465,16 @@ button:focus-visible {
   .headline {
     font-size: clamp(2.6rem, 1.2rem + 15vw, 4.4rem);
     line-height: 0.92;
+  }
+
+  .headline__word--bello {
+    /* L'interazione magnetica via cursore è comunque disattivata su
+       touch/mobile in concept.js (hover:hover + pointer:fine), quindi
+       la promozione a livello GPU (will-change) qui non serve a nulla:
+       disattivarla evita che sia un fattore aggiuntivo nell'eventuale
+       artefatto di rendering della "B" descritto sopra, senza alcun
+       impatto visivo (nessuna animazione dipende da questo hint). */
+    will-change: auto;
   }
 
   .stage__foot {

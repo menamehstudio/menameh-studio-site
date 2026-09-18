@@ -476,6 +476,27 @@ button:focus-visible {
   text-decoration-color: var(--color-accent);
 }
 
+.legal-line-btn {
+  appearance: none;
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  color: var(--color-text-muted);
+  text-decoration: underline;
+  text-decoration-color: rgba(247, 245, 242, 0.35);
+  text-underline-offset: 2px;
+  cursor: pointer;
+  transition: color var(--transition-fast), text-decoration-color var(--transition-fast);
+}
+
+.legal-line-btn:hover,
+.legal-line-btn:focus-visible {
+  color: var(--color-accent);
+  text-decoration-color: var(--color-accent);
+}
+
 .index-tag {
   margin: 0;
   color: var(--color-text-muted);

@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0c0c0c">
+  <meta name="description" content="Biglietto digitale di Luca Bottoni — MENA MEH! Independent Creative & Strategy Studio.">
+  <title>Luca Bottoni — MENA MEH!</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%230c0c0c'/%3E%3Ctext x='32' y='41' text-anchor='middle' font-family='Arial' font-size='28' font-weight='900' fill='%23f2f2f2'%3EM!%3C/text%3E%3C/svg%3E">
+</head>
+<body>
+<div id="mena-digital-preview">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;500;700&display=swap');
+    #mena-digital-preview {
+      --mm-black: #0c0c0c;
+      --mm-ink: #0c0c0c;
+      --mm-paper: #f2f2f2;
+      --mm-grey: #bfbfba;
+      --mm-acid: #61d90b;
+      padding: 28px 12px;
+      display: grid;
+      place-items: center;
+      color: var(--mm-ink);
+      font-family: Inter, Arial, sans-serif;
+      min-height: 100vh;
+    }
+    #mena-digital-preview * { box-sizing: border-box; }
+    #mena-digital-preview .phone {
+      width: min(390px, 100%);
+      overflow: hidden;
+      background: var(--mm-paper);
+      border-radius: 28px;
+      box-shadow: 0 20px 60px rgba(0,0,0,.22);
+    }
+    #mena-digital-preview .hero {
+      position: relative;
+      min-height: 270px;
+      padding: 26px 24px 24px;
+      background: var(--mm-black);
+      color: var(--mm-paper);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    #mena-digital-preview .eyebrow,
+    #mena-digital-preview .micro {
+      font-size: 10px;
+      line-height: 1.2;
+      letter-spacing: .08em;
+      font-weight: 500;
+    }
+    #mena-digital-preview .brand-logo {
+      align-self: center;
+      display: block;
+      width: 76%;
+      height: auto;
+    }
+    #mena-digital-preview .brand-logo path { fill: #f2f2f2; }
+    #mena-digital-preview .studio { align-self: flex-end; }
+    #mena-digital-preview .content { padding: 24px; }
+    #mena-digital-preview .statement {
+      margin: 0 0 30px;
+      font-family: 'Archivo Black', Impact, sans-serif;
+      font-size: clamp(24px, 6.4vw, 30px);
+      line-height: .98;
+      letter-spacing: -.035em;
+      text-transform: uppercase;
+      color: #0c0c0c;
+    }
+    #mena-digital-preview .name {
+      margin: 0;
+      font-family: 'Archivo Black', Impact, sans-serif;
+      font-size: 25px;
+      line-height: 1;
+      letter-spacing: -.025em;
+      color: #0c0c0c;
+    }
+    #mena-digital-preview .role {
+      margin: 10px 0 24px;
+      font-size: 15px;
+      line-height: 1.25;
+      color: #0c0c0c;
+    }
+    #mena-digital-preview .primary-action,
+    #mena-digital-preview .action {
+      min-height: 48px;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      font-weight: 700;
+      letter-spacing: .02em;
+    }
+    #mena-digital-preview .primary-action {
+      padding: 0 16px;
+      background: var(--mm-black);
+      color: var(--mm-paper);
+      font-size: 14px;
+    }
+    #mena-digital-preview .primary-action:hover { background: var(--mm-acid); color: var(--mm-black); }
+    #mena-digital-preview .quick {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      margin-top: 1px;
+      background: var(--mm-black);
+    }
+    #mena-digital-preview .quick a {
+      min-height: 54px;
+      background: var(--mm-paper);
+      color: var(--mm-black);
+      display: grid;
+      place-items: center;
+      text-decoration: none;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: .05em;
+    }
+    #mena-digital-preview .quick a:hover { background: var(--mm-grey); }
+    #mena-digital-preview .links { margin-top: 25px; border-top: 1px solid var(--mm-black); }
+    #mena-digital-preview .action {
+      color: var(--mm-black);
+      border: 0;
+      border-bottom: 1px solid var(--mm-black);
+      appearance: none;
+      -webkit-appearance: none;
+      font-size: 13px;
+      width: 100%;
+      padding: 0;
+      background: transparent;
+      font-family: inherit;
+      text-align: left;
+    }
+    #mena-digital-preview .action:hover { color: var(--mm-acid); }
+    #mena-digital-preview .footer {
+      padding-top: 24px;
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 16px;
+    }
+    #mena-digital-preview .payoff {
+      font-family: 'Archivo Black', Impact, sans-serif;
+      font-size: 15px;
+      line-height: .95;
+    }
+    #mena-digital-preview .url { font-size: 11px; font-weight: 700; }
+    @media (max-width: 350px) {
+      #mena-digital-preview { padding-inline: 6px; }
+      #mena-digital-preview .hero, #mena-digital-preview .content { padding-inline: 19px; }
+      #mena-digital-preview .brand-logo { width: 80%; }
+    }
+  </style>
+
+  <article class="phone" aria-label="Anteprima del biglietto da visita digitale di Luca Bottoni">
+    <header class="hero">
+      <div class="eyebrow">INDEPENDENT CREATIVE</div>
+      <svg class="brand-logo" viewBox="0 0 1080 500" role="img" aria-label="Logo originale MENA MEH!">
+        <path d="M118.37,54.72h67.42l27.27,99.15h.5l27.27-99.15h67.92v177.23h-46.85v-111.05h-.5l-29.5,111.05h-37.93l-29.5-111.05h-.5v111.05h-45.61V54.72Z"/>
+        <path d="M354.89,54.72h138.07v42.14h-86.26v24.04h61.5v38.92h-61.5v27.76h88.74v44.37h-140.55V54.72Z"/>
+        <path d="M543.8,54.72h51.81l58,99.65h.5V54.72h50.07v177.23h-53.54l-56.27-100.39h-.5v100.39h-50.07V54.72Z"/>
+        <path d="M816.51,54.72h52.8l65.69,177.23h-55.03l-8.68-26.03h-59.99l-8.68,26.03h-51.56l65.44-177.23ZM822.95,170.23h36.69l-11.15-34.71c-2.73-8.67-6.69-22.8-6.69-22.8h-.5s-3.72,14.13-6.69,22.8l-11.65,34.71Z"/>
+        <path d="M354.03,260.7h67.42l27.27,99.15h.5l27.27-99.15h67.92v177.23h-46.85v-111.05h-.5l-29.5,111.05h-37.93l-29.5-111.05h-.5v111.05h-45.61v-177.23Z"/>
+        <path d="M594.88,260.7h138.07v42.14h-86.26v24.04h53.79v38.92h-53.79v27.76h88.74v44.37h-140.55v-177.23Z"/>
+        <path d="M883.32,368.52h-54.54v69.41h-51.81v-177.23h51.81v64.94h46.91l7.62,42.88Z"/>
+        <path d="M892.23,305.56v-44.86h48.34v44.86l-11.65,68.41h-25.03l-11.65-68.41ZM892.23,390.58h48.34v47.35h-48.34v-47.35Z"/>
+      </svg>
+      <div class="micro studio">STRATEGY STUDIO.</div>
+    </header>
+
+    <section class="content">
+      <p class="statement">Il meglio<br>non ci sta<br>su un biglietto.</p>
+      <h2 class="name">LUCA BOTTONI</h2>
+      <p class="role">Business Development<br>&amp; Account Director</p>
+
+      <a id="save-luca-contact" class="primary-action cursor-interaction" href="#">
+        <span>SALVA IL CONTATTO</span><span aria-hidden="true">↓</span>
+      </a>
+
+      <nav class="quick" aria-label="Contatti rapidi">
+        <a class="cursor-interaction" href="tel:+393408106403">CHIAMA</a>
+        <a class="cursor-interaction" href="mailto:luca@menameh.com">EMAIL</a>
+        <a class="cursor-interaction" href="https://wa.me/393408106403">WHATSAPP</a>
+      </nav>
+
+      <nav class="links" aria-label="Altri collegamenti">
+        <a class="action cursor-interaction" href="https://calendly.com/menameh-studio"><span>PRENOTA UNA CALL</span><span aria-hidden="true">↗</span></a>
+        <a class="action cursor-interaction" href="https://www.linkedin.com/in/luca-bottoni-2770361a4/"><span>LINKEDIN</span><span aria-hidden="true">↗</span></a>
+        <a class="action cursor-interaction" href="https://www.menameh.com/hello"><span>SCOPRI MENA MEH!</span><span aria-hidden="true">↗</span></a>
+        <button id="share-card" class="action cursor-interaction" type="button"><span>CONDIVIDI</span><span aria-hidden="true">↗</span></button>
+      </nav>
+
+      <footer class="footer">
+        <div class="payoff">FROM MEH<br>TO WOOOW.</div>
+        <div class="url">menameh.com</div>
+      </footer>
+    </section>
+  </article>
+  <script>
+    document.getElementById('save-luca-contact').addEventListener('click', function (event) {
+      event.preventDefault();
+      const vcard = [
+        'BEGIN:VCARD',
+        'VERSION:3.0',
+        'N:Bottoni;Luca;;;',
+        'FN:Luca Bottoni',
+        'ORG:MENA MEH!',
+        'TITLE:Business Development & Account Director',
+        'TEL;TYPE=CELL:+393408106403',
+        'EMAIL;TYPE=WORK:luca@menameh.com',
+        'URL:https://www.menameh.com/hello',
+        'END:VCARD'
+      ].join('\r\n');
+      const file = new Blob([vcard], { type: 'text/vcard;charset=utf-8' });
+      const link = document.createElement('a');
+      link.href = URL.createObjectURL(file);
+      link.download = 'luca-bottoni.vcf';
+      document.body.appendChild(link);
+      link.click();
+      link.remove();
+      URL.revokeObjectURL(link.href);
+    });
+
+    document.getElementById('share-card').addEventListener('click', async function () {
+      const shareData = {
+        title: 'Luca Bottoni — MENA MEH!',
+        text: 'Il biglietto digitale di Luca Bottoni — MENA MEH!',
+        url: window.location.href
+      };
+      if (navigator.share) {
+        try { await navigator.share(shareData); } catch (error) { /* condivisione annullata */ }
+      } else {
+        await navigator.clipboard.writeText(window.location.href);
+        const label = this.querySelector('span');
+        const original = label.textContent;
+        label.textContent = 'LINK COPIATO';
+        setTimeout(() => { label.textContent = original; }, 1800);
+      }
+    });
+  </script>
+</div>
+</body>
+</html>

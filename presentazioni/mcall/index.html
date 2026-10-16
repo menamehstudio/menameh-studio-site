@@ -1,0 +1,1138 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>MC.ALL — Il salotto d'arte | Direzione creativa MENA MEH!</title>
+<meta name="description" content="Proposta di direzione creativa di MENA MEH! per MC.ALL, la boutique di Monica Crestan a Bassano del Grappa.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#dbddd8">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+
+<link rel="preload" as="image" href="assets/img/monica/monica-scala-desktop.webp" media="(min-width: 641px)">
+<link rel="preload" as="image" href="assets/img/monica/monica-scala-mobile.webp" media="(max-width: 640px)">
+<script>
+  (function(){
+    var r = document.documentElement, reduce = false;
+    r.classList.add('js');
+    try {
+      var pref = localStorage.getItem('mcall-reduce-motion');
+      reduce = pref === '1' || (pref === null && window.matchMedia('(prefers-reduced-motion: reduce)').matches);
+    } catch (e) {
+      reduce = !!(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches);
+    }
+    if (reduce) r.classList.add('reduce-motion');
+    else r.classList.add('intro');
+  })();
+</script>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main">Vai al contenuto</a>
+
+<!-- ============ NAV ============ -->
+<header class="pills" id="nav" data-theme="light">
+  <a href="#apertura" class="pill pill--brand" aria-label="MC.ALL, torna all'inizio">MC.ALL <span>× MENA MEH!</span></a>
+  <nav class="pills__links" aria-label="Capitoli">
+    <a href="#analisi" class="pill" data-nav>Analisi</a>
+    <a href="#visione" class="pill" data-nav>Visione</a>
+    <a href="#monica" class="pill" data-nav>Monica</a>
+    <a href="#moodboard" class="pill" data-nav>Moodboard</a>
+    <a href="#codice" class="pill" data-nav>Codice</a>
+    <a href="#boutique" class="pill" data-nav>Boutique</a>
+    <a href="#contenuti" class="pill" data-nav>Contenuti</a>
+    <a href="#reference" class="pill" data-nav>Reference</a>
+  </nav>
+  <div class="pills__tools">
+    <button type="button" class="pill pill--ghost" id="motion-toggle" aria-pressed="false"><span class="pill__dot" aria-hidden="true"></span><span class="pill__label">Riduci animazioni</span></button>
+    <button type="button" class="pill pill--menu" id="nav-burger" aria-expanded="false" aria-controls="mobile-nav">Menu</button>
+  </div>
+</header>
+
+<div class="mobile-nav" id="mobile-nav" hidden>
+  <nav aria-label="Capitoli (mobile)">
+    <a href="#analisi" data-nav><span>01</span>L'analisi</a>
+    <a href="#visione" data-nav><span>02</span>La visione</a>
+    <a href="#monica" data-nav><span>03</span>Il ruolo di Monica</a>
+    <a href="#moodboard" data-nav><span>04</span>Moodboard</a>
+    <a href="#codice" data-nav><span>05</span>Il codice visivo</a>
+    <a href="#boutique" data-nav><span>06</span>La boutique</a>
+    <a href="#contenuti" data-nav><span>07</span>I contenuti</a>
+    <a href="#reference" data-nav><span>08</span>Reference social</a>
+    <a href="#chiusura" data-nav><span>09</span>Prossimi passi</a>
+  </nav>
+  <p class="mobile-nav__sign">MC.ALL × MENA MEH!</p>
+</div>
+
+<main id="main">
+
+  <!-- ============ 00 APERTURA ============ -->
+  <section id="apertura" class="hero" data-theme="light" aria-labelledby="hero-title">
+    <h1 class="hero__mark" id="hero-title">
+      <span class="sr-only">MC.ALL — Il salotto d'arte</span>
+      <span class="hero__word" aria-hidden="true"><span class="hero__word-in">MC.ALL</span></span>
+    </h1>
+
+    <figure class="hero__photo">
+      <picture>
+        <source media="(max-width: 640px)" srcset="assets/img/monica/monica-scala-mobile.webp" width="994" height="1334">
+        <img src="assets/img/monica/monica-scala-desktop.webp" alt="Monica Crestan scende la scala a chiocciola in legno di MC.ALL, sotto le travi a vista, accanto a una vetrinetta con fiori. Fotografia in bianco e nero." width="1672" height="941" fetchpriority="high">
+      </picture>
+    </figure>
+
+    <div class="hero__meta">
+      <p class="hero__concept"><span class="mark" aria-hidden="true"></span>Il salotto d'arte</p>
+      <p class="hero__lede">Un salotto di ricerca, dove Monica compone una selezione personale di capi da scoprire, provare e vivere nel tempo.</p>
+      <div class="hero__aside">
+        <p>Proposta di direzione creativa<br>MENA MEH! · Ottobre 2026</p>
+        <a class="hero__cta" href="#analisi">Esplora la proposta <span aria-hidden="true">↓</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 01 L'ANALISI ============ -->
+  <section id="analisi" class="sec sec--light lab" data-theme="light" aria-labelledby="analisi-title">
+    <header class="head">
+      <p class="head__index" data-reveal><span class="mark" aria-hidden="true"></span>01 · L'analisi</p>
+      <div class="head__main">
+        <h2 class="head__title" id="analisi-title" data-reveal>Prima della direzione, <em>l'ascolto.</em></h2>
+        <p class="head__lead" data-reveal>Prima di definire una direzione creativa abbiamo analizzato il racconto di Monica, le informazioni pubbliche di MC.ALL, il contesto della boutique a Bassano del Grappa, la presenza digitale e le fotografie dello spazio.</p>
+        <p class="head__intro" data-reveal>L'obiettivo era capire come rendere più leggibili, prima della visita, il valore della selezione, la competenza di Monica e l'esperienza che il negozio può offrire.</p>
+        <p class="head__credit" data-reveal>Analisi a cura di Luca Bottoni · MENA MEH! Future Lab · ottobre 2026</p>
+      </div>
+    </header>
+
+    <p class="band-label" data-reveal><span>Cinque aree di opportunità</span><span>01 — 05</span></p>
+
+    <div class="areas">
+      <article class="area area--half">
+        <button type="button" class="area__img" data-viewer data-reveal="wipe" data-caption="La sala del tavolo: maglieria piegata sul tavolo antico di MC.ALL.">
+          <img src="assets/img/boutique/sala-tavolo.webp" alt="Maglieria piegata sul lungo tavolo di legno di MC.ALL, con gli stender sullo sfondo." width="1012" height="1800" loading="lazy">
+        </button>
+        <div class="area__cap" data-reveal>
+          <div>
+            <p class="area__kicker">La sala del tavolo, MC.ALL</p>
+            <h3>Il valore dei capi</h3>
+            <p>Rendere più comprensibile il valore dei capi, raccontando selezione, materiali, vestibilità e durata.</p>
+          </div>
+          <span class="area__n" aria-hidden="true">01</span>
+        </div>
+      </article>
+
+      <article class="area area--half">
+        <button type="button" class="area__img" data-viewer data-reveal="wipe" data-caption="Monica Crestan seduta sulla scala di MC.ALL.">
+          <img src="assets/img/monica/monica-scala-seduta.webp" alt="Monica Crestan seduta sui gradini della scala a chiocciola di MC.ALL, in bianco e nero." width="952" height="1041" loading="lazy">
+        </button>
+        <div class="area__cap" data-reveal>
+          <div>
+            <p class="area__kicker">Monica Crestan, MC.ALL</p>
+            <h3>Monica, in primo piano</h3>
+            <p>Dare maggiore visibilità a Monica e alla sua competenza, oggi più percepibili nella relazione diretta che nella comunicazione.</p>
+          </div>
+          <span class="area__n" aria-hidden="true">02</span>
+        </div>
+      </article>
+
+      <article class="area area--quarter">
+        <button type="button" class="area__img" data-viewer data-reveal="wipe" data-caption="La vetrina di via Menarola: una giacca color tabacco sotto due faretti.">
+          <img src="assets/img/boutique/vetrina-giacca.webp" alt="Una giacca color tabacco appesa nella vetrina di MC.ALL, illuminata da due faretti." width="478" height="573" loading="lazy">
+        </button>
+        <div class="area__cap" data-reveal>
+          <div>
+            <p class="area__kicker">La vetrina di via Menarola</p>
+            <h3>Luce, vetrine, esposizione</h3>
+            <p>Allineare luce, vetrine ed esposizione alla cura e alla qualità che MC.ALL vuole esprimere.</p>
+          </div>
+          <span class="area__n" aria-hidden="true">03</span>
+        </div>
+      </article>
+
+      <article class="area area--quarter">
+        <button type="button" class="area__img" data-viewer data-reveal="wipe" data-caption="Stender di giacche e cappotti davanti allo specchio, MC.ALL.">
+          <img src="assets/img/boutique/stender-specchio.webp" alt="Giacche e cappotti nei toni del marrone su due stender davanti a uno specchio." width="1012" height="1800" loading="lazy">
+        </button>
+        <div class="area__cap" data-reveal>
+          <div>
+            <p class="area__kicker">Stender e specchio, MC.ALL</p>
+            <h3>Selezione, marchi, servizio</h3>
+            <p>Rendere più chiari lo stile della selezione, i marchi e il servizio offerto.</p>
+          </div>
+          <span class="area__n" aria-hidden="true">04</span>
+        </div>
+      </article>
+
+      <article class="area area--half">
+        <button type="button" class="area__img" data-viewer data-reveal="wipe" data-caption="La facciata di MC.ALL al civico 18 di via Menarola, Bassano del Grappa.">
+          <img src="assets/img/boutique/facciata-ampia.webp" alt="La facciata color intonaco di MC.ALL con la porta in legno e le due vetrine." width="1800" height="1013" loading="lazy">
+        </button>
+        <div class="area__cap" data-reveal>
+          <div>
+            <p class="area__kicker">Via Menarola 18, Bassano del Grappa</p>
+            <h3>La scoperta, prima di entrare</h3>
+            <p>Facilitare la scoperta digitale del negozio e orientare chi desidera conoscerlo prima di entrare.</p>
+          </div>
+          <span class="area__n" aria-hidden="true">05</span>
+        </div>
+      </article>
+    </div>
+
+    <div class="lab__close">
+      <aside class="lab__note" data-reveal>
+        <p class="label">Una nota di metodo</p>
+        <p>Questa lettura individua priorità e ipotesi di lavoro; non attribuisce il problema a una causa economica specifica. Al momento non sono disponibili dati sufficienti su prezzi, vendite, conversioni e composizione della clientela per trarre conclusioni di quel tipo.</p>
+      </aside>
+    </div>
+  </section>
+
+  <section class="sec sec--dark statement-band" data-theme="dark" aria-label="Sintesi dell'analisi">
+    <div class="head">
+      <p class="head__index" data-reveal><span class="mark" aria-hidden="true"></span>Dall'analisi alla direzione</p>
+      <div class="head__main">
+        <p class="head__title" data-reveal>Da qui nasce la direzione: rendere visibili la persona che seleziona, la selezione e l'esperienza del salotto.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 02 LA VISIONE ============ -->
+  <section id="visione" class="sec sec--dark visione-sec" data-theme="dark" aria-labelledby="visione-title">
+    <div class="wrap">
+      <header class="head">
+        <p class="head__index" data-reveal><span class="mark" aria-hidden="true"></span>02 · La visione</p>
+        <div class="head__main">
+          <h2 class="head__title" id="visione-title" data-reveal>Portare lo sguardo di Monica <em>prima della soglia.</em></h2>
+              </div>
+      </header>
+
+      <div class="vision">
+        <div class="vision__lede" data-reveal>
+          <p class="statement">Dentro ci sono uno spazio curato e una persona che conosce ogni capo. Fuori, in vetrina e sui social, questo sguardo arriva ancora a frammenti.</p>
+          <p class="body">La proposta è fare in modo che chi passa in via Menarola, o scorre il profilo, intuisca subito che ogni capo è lì per una ragione, e che quella ragione ha un nome.</p>
+        </div>
+
+        <ol class="opps">
+          <li class="opp" data-reveal>
+            <span class="opp__n">i.</span>
+            <h3>Un carattere di selezione riconoscibile</h3>
+            <p>Far percepire la mano che sceglie: pochi pezzi, accostati con intenzione.</p>
+          </li>
+          <li class="opp" data-reveal>
+            <span class="opp__n">ii.</span>
+            <h3>Una regia visiva costante</h3>
+            <p>Luce, inquadrature e toni che ritornano, dalla vetrina al feed.</p>
+          </li>
+          <li class="opp" data-reveal>
+            <span class="opp__n">iii.</span>
+            <h3>Il valore dei capi, raccontato</h3>
+            <p>Materia, costruzione e vestibilità: ciò che oggi si scopre solo provando.</p>
+          </li>
+        </ol>
+      </div>
+
+      <div class="shift" aria-label="Il passaggio strategico">
+        <p class="shift__label" data-reveal>Il passaggio</p>
+        <div class="shift__rows">
+          <div class="shift__row" data-reveal>
+            <span class="shift__from">Mostrare singoli prodotti</span>
+            <span class="shift__arrow" aria-hidden="true">→</span>
+            <span class="shift__to">Raccontare uno <em>sguardo</em></span>
+          </div>
+          <div class="shift__row" data-reveal>
+            <span class="shift__from">Un capo alla volta</span>
+            <span class="shift__arrow" aria-hidden="true">→</span>
+            <span class="shift__to">Una <em>selezione</em> che si riconosce</span>
+          </div>
+          <div class="shift__row" data-reveal>
+            <span class="shift__from">L'esperienza scoperta dopo</span>
+            <span class="shift__arrow" aria-hidden="true">→</span>
+            <span class="shift__to">L'esperienza di <em>Monica</em>, raccontata prima</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 03 IL RUOLO DI MONICA ============ -->
+  <section id="monica" class="sec sec--light monica-sec" data-theme="light" aria-labelledby="monica-title">
+    <div class="split">
+      <div class="split__media">
+        <figure class="monica__portrait">
+          <button type="button" class="monica__frame" data-reveal="wipe" data-viewer data-caption="Monica Crestan sulla scala di MC.ALL, in boutique.">
+            <img src="assets/img/monica/monica-scala-colore.webp" alt="Monica Crestan in piedi sulla scala a chiocciola di MC.ALL, vestita di blu notte." width="984" height="1326" loading="lazy">
+          </button>
+          <figcaption>Monica Crestan, in boutique</figcaption>
+        </figure>
+      </div>
+      <div class="split__body">
+      <header class="head">
+        <p class="head__index" data-reveal><span class="mark" aria-hidden="true"></span>03 · Il ruolo di Monica</p>
+        <div class="head__main">
+          <h2 class="head__title" id="monica-title" data-reveal>L'autrice della <em>selezione.</em></h2>
+              </div>
+      </header>
+
+      <div class="monica">
+
+
+        <div class="monica__intro" data-reveal>
+          <p class="statement">Monica ha seguito per oltre trent'anni le collezioni dalla prima intuizione al capo finito, negli uffici stile e prodotto. Per questo sceglie con gli occhi di chi i capi li ha disegnati.</p>
+          <p class="body">Nel progetto diventa la garanzia della selezione e la guida nella scelta: chi spiega un tessuto, chi riconosce una vestibilità, chi compone un look intorno alla persona che ha davanti.</p>
+        </div>
+
+        <dl class="facts">
+          <div class="fact" data-reveal>
+            <dt>Oltre 30 anni</dt>
+            <dd>negli uffici stile e prodotto, soprattutto su collezioni femminili.</dd>
+          </div>
+          <div class="fact" data-reveal>
+            <dt>Stilista e modellista</dt>
+            <dd>una formazione che le dà conoscenza di tessuti, materie prime, lavorazioni, dettagli e vestibilità.</dd>
+          </div>
+          <div class="fact" data-reveal>
+            <dt>Londra · Parigi · New York · Hong Kong</dt>
+            <dd>alcune delle città visitate negli anni per osservare boutique e raccogliere ispirazioni.</dd>
+          </div>
+          <div class="fact" data-reveal>
+            <dt>Ogni stagione</dt>
+            <dd>visita di persona le presentazioni delle collezioni e sceglie ciò che sente vicino alla boutique.</dd>
+          </div>
+          <div class="fact" data-reveal>
+            <dt>Pochi look</dt>
+            <dd>curati nei dettagli, con le taglie necessarie, per lasciare spazio a nuove proposte.</dd>
+          </div>
+        </dl>
+
+        <blockquote class="monica__quote" data-reveal>
+          <p>«Non cerco semplicemente il lusso. Cerco contenuto, qualità, ricerca e originalità.»</p>
+          <cite>Monica Crestan</cite>
+        </blockquote>
+
+        <div class="monica__client" data-reveal>
+          <p class="label">Accanto alle clienti</p>
+          <p>Un look quotidiano, una cerimonia, una serata a teatro, un aperitivo, il desiderio di una maglieria speciale: Monica accompagna ogni scelta con la sua conoscenza del prodotto. È la parte del lavoro che oggi si vede meno, e quella che Monica indica come la ragione per cui le clienti tornano.</p>
+        </div>
+
+        <div class="brands" data-reveal>
+          <p class="label">La selezione di questa stagione</p>
+          <ul class="brands__list">
+            <li>Ter et Bantine</li><li>Hache</li><li>Alémais</li><li>Erika Cavallini</li><li>Semicouture</li>
+            <li>Nude</li><li>Le Sarte Pettegole</li><li>Faliero Sarti</li><li>Sofie D'Hoore</li><li>Jucca <small>A/I</small></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <p class="source" data-reveal>Fonti: testo «MC.ALL – Il mondo di Monica» scritto da Monica Crestan; report della call di Luca Bottoni (9 ottobre 2026).</p>
+    </div>
+    </div>
+  </section>
+
+  <!-- ============ 04 MOODBOARD ============ -->
+  <section id="moodboard" class="sec sec--dark moodboard-sec" data-theme="dark" aria-labelledby="moodboard-title">
+    <div class="wrap">
+      <header class="head">
+        <p class="head__index" data-reveal><span class="mark" aria-hidden="true"></span>04 · Moodboard</p>
+        <div class="head__main">
+          <h2 class="head__title" id="moodboard-title" data-reveal>Il moodboard, <em>immagine per immagine.</em></h2>
+        <p class="head__intro" data-reveal>Ogni immagine ha un ruolo preciso nella direzione. Sono reference esterne, raccolte da Pinterest e Instagram, e alcune sono dichiaratamente generate o modificate con l'intelligenza artificiale: non sono fotografie di MC.ALL né capi in vendita.</p>
+              </div>
+      </header>
+
+      <div class="mood">
+        <div class="mood__group">
+          <div class="mood__head" data-reveal>
+            <p class="label">I · Il salotto d'arte</p>
+            <p>Ritratti in interni, tra quadri, poltrone e libri. È il tono del salotto: una donna a suo agio tra le cose che ha scelto.</p>
+          </div>
+          <div class="mood__grid">
+            <button type="button" class="tile" data-viewer data-caption="Ritratto in poltrona tra quadri antichi. Ruolo: il tono del salotto." data-reveal><img src="assets/img/moodboard/mb-poltrona-quadri.webp" alt="Donna in camicia bianca in poltrona davanti a quadri antichi." width="611" height="845" loading="lazy"><span>Autorevolezza quieta</span></button>
+            <button type="button" class="tile" data-viewer data-caption="Donna in completo bianco a tavola, tra pareti di quadri. Ruolo: la galleria domestica." data-reveal><img src="assets/img/moodboard/mb-quadri-tavola.webp" alt="Donna in completo bianco seduta a tavola, circondata da quadri incorniciati." width="603" height="870" loading="lazy"><span>La galleria domestica</span></button>
+            <button type="button" class="tile" data-viewer data-caption="Donna seduta su una panca di museo davanti alla Gioconda. Ruolo: il quotidiano dentro l'arte." data-reveal><img src="assets/img/moodboard/mb-galleria.webp" alt="Donna con borsa seduta su una panca di museo sotto la Gioconda." width="622" height="700" loading="lazy"><span>Il quotidiano nell'arte</span></button>
+            <button type="button" class="tile" data-viewer data-caption="Ritratto seduto davanti a una libreria. Ruolo: possibile riferimento per il ritratto di Monica." data-reveal><img src="assets/img/moodboard/mb-libreria.webp" alt="Donna vestita di nero seduta davanti a una grande libreria." width="597" height="738" loading="lazy"><span>Un ritratto d'autrice</span></button>
+            <button type="button" class="tile" data-viewer data-caption="Donna su un divano in luce calda. Ruolo: la luce del salotto." data-reveal><img src="assets/img/moodboard/mb-salotto-luce.webp" alt="Donna in camicia bianca su un divano, illuminata da luce calda." width="463" height="757" loading="lazy"><span>La luce del salotto</span></button>
+          </div>
+        </div>
+
+        <div class="mood__group">
+          <div class="mood__head" data-reveal>
+            <p class="label">II · Luce e gesto</p>
+            <p>Luce cinematografica e corpi in movimento: la base visiva di «In movimento».</p>
+          </div>
+          <div class="mood__grid">
+            <button type="button" class="tile" data-viewer data-caption="Donna in completo chiaro in una stazione, tra luce e vapore. Immagine con crediti di una campagna immaginaria realizzata con IA." data-reveal><img src="assets/img/moodboard/mb-stazione.webp" alt="Donna in completo chiaro in una stazione ferroviaria piena di luce e vapore." width="625" height="825" loading="lazy"><span>Luce cinematografica</span></button>
+            <button type="button" class="tile" data-viewer data-caption="Donna in trench in movimento. Ruolo: il gesto che mostra il tessuto." data-reveal><img src="assets/img/moodboard/mb-trench.webp" alt="Donna in trench che cammina, con sfondo mosso." width="579" height="747" loading="lazy"><span>Il passo</span></button>
+            <button type="button" class="tile" data-viewer data-caption="Corsa con un mazzo di fiori, in movimento sfocato. Ruolo: energia e spontaneità." data-reveal><img src="assets/img/reference/ins-corsa.webp" alt="Donna che corre con un mazzo di fiori, immagine mossa." width="696" height="880" loading="lazy"><span>La corsa</span></button>
+            <button type="button" class="tile" data-viewer data-caption="Edgar Degas, ballerine durante una lezione. Ruolo: il gesto fuori scena." data-reveal><img src="assets/img/reference/ins-degas-lezione.webp" alt="Dipinto di Degas con ballerine alla sbarra." width="667" height="753" loading="lazy"><span>Degas, fuori scena</span></button>
+            <button type="button" class="tile" data-viewer data-caption="Ombre di foglie su un volto. Ruolo: la luce come materia." data-reveal><img src="assets/img/reference/ins-ombre.webp" alt="Volto di donna con ombre di foglie." width="684" height="946" loading="lazy"><span>Ombre che disegnano</span></button>
+          </div>
+        </div>
+
+        <div class="mood__group">
+          <div class="mood__head" data-reveal>
+            <p class="label">III · Accenti surreali</p>
+            <p>Giallo e rosso come accenti, oggetti fuori scala, presenze inattese. Da usare con misura: il capo deve restare leggibile.</p>
+          </div>
+          <div class="mood__grid">
+            <button type="button" class="tile" data-viewer data-caption="Cappotto spigato su una seduta di sfere gialle. Ruolo: surreale con capo leggibile, il bilanciamento ideale." data-reveal><img src="assets/img/moodboard/mb-sfere-cappotto.webp" alt="Figura in cappotto spigato su una poltrona di sfere gialle." width="712" height="1000" loading="lazy"><span>Il capo resta protagonista</span></button>
+            <button type="button" class="tile" data-viewer data-caption="Cappotto nero con colli di cigno. Ruolo: il surreale che nasce dal capo." data-reveal><img src="assets/img/moodboard/mb-cigni.webp" alt="Figura in cappotto nero e cappello con teste di cigno che spuntano." width="717" height="1000" loading="lazy"><span>Il capo come scultura</span></button>
+            <button type="button" class="tile" data-viewer data-caption="Figura gialla tra grandi sfere gialle in riva al mare. Ruolo: il colore come segno." data-reveal><img src="assets/img/moodboard/mb-sfere.webp" alt="Figura in abito giallo tra grandi sfere gialle." width="737" height="1000" loading="lazy"><span>Il giallo come segno</span></button>
+            <button type="button" class="tile" data-viewer data-caption="Maschera con limoni sospesi a fili rossi. Ruolo: accento estremo, solo per campagne speciali." data-reveal><img src="assets/img/moodboard/mb-limoni.webp" alt="Volto-maschera bianco con limoni sospesi a fili rossi." width="782" height="1000" loading="lazy"><span>Accento estremo</span></button>
+            <button type="button" class="tile" data-viewer data-caption="Volto coperto da un cuore giallo plissettato. Ruolo: accento estremo, solo per campagne speciali." data-reveal><img src="assets/img/moodboard/mb-cuore.webp" alt="Volto coperto da un grande cuore giallo plissettato, labbra rosse." width="721" height="1000" loading="lazy"><span>Il rosso, una goccia</span></button>
+            <button type="button" class="tile" data-viewer data-caption="Volto coperto da una farfalla, camicia con fiocco. Ruolo: mistero gentile." data-reveal><img src="assets/img/reference/ins-farfalla.webp" alt="Ritratto di donna con una farfalla bianca sul viso." width="696" height="946" loading="lazy"><span>Mistero gentile</span></button>
+            <button type="button" class="tile" data-viewer data-caption="Cappello rosso a falda larga che nasconde il volto. Ruolo: l'accessorio come colpo di scena." data-reveal><img src="assets/img/reference/ins-cappello-rosso.webp" alt="Donna seduta con un grande cappello rosso che le copre il volto." width="656" height="670" loading="lazy"><span>Un colpo di scena</span></button>
+          </div>
+        </div>
+
+        <div class="mood__group">
+          <div class="mood__head" data-reveal>
+            <p class="label">IV · Vetrine e cornici</p>
+            <p>Il capo isolato e incorniciato, con un oggetto o una parola accanto. Le reference per facciata e vetrine sono nel capitolo sulla boutique.</p>
+          </div>
+          <div class="mood__grid">
+            <button type="button" class="tile" data-viewer data-caption="Vetrina con archi metallici e una borsa sospesa. Ruolo: geometria e vuoto." data-reveal><img src="assets/img/reference/ins-vetrina-archi.webp" alt="Vetrina con archi sottili in metallo e una borsa verde sospesa." width="677" height="723" loading="lazy"><span>Geometria e vuoto</span></button>
+            <button type="button" class="tile" data-viewer data-caption="Finestra con insegna a strisce e lampade interne. Ruolo: l'invito dalla strada." data-reveal><img src="assets/img/reference/ins-sportello.webp" alt="Una finestrella aperta con tenda a strisce e lampade accese all'interno." width="646" height="854" loading="lazy"><span>L'invito dalla strada</span></button>
+            <button type="button" class="tile" data-viewer data-caption="Donna seduta in un museo con cappotto ampio. Ruolo: il capo in un luogo d'arte." data-reveal><img src="assets/img/reference/ins-museo.webp" alt="Donna seduta su una panca in un museo, con un ampio cappotto." width="554" height="877" loading="lazy"><span>Il capo in un luogo d'arte</span></button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 05 IL CODICE VISIVO ============ -->
+  <section id="codice" class="sec sec--dark codice-sec" data-theme="dark" aria-labelledby="codice-title">
+    <div class="wrap">
+      <header class="head">
+        <p class="head__index" data-reveal><span class="mark" aria-hidden="true"></span>05 · Il codice visivo</p>
+        <div class="head__main">
+          <h2 class="head__title" id="codice-title" data-reveal>Sei codici per una <em>regia</em> riconoscibile.</h2>
+        <p class="head__intro" data-reveal>Una base editoriale e indossabile, in cui il capo resta sempre leggibile. Sopra, pochi momenti poetici e inattesi: quattro immagini su cinque raccontano il capo, la quinta lo fa ricordare.</p>
+              </div>
+      </header>
+
+      <ol class="codes">
+        <li class="code code--tall" data-reveal>
+          <button type="button" class="code__media" data-viewer data-caption="Luce: ombre di foglie su un volto. Reference esterna dal moodboard.">
+            <img src="assets/img/reference/ins-ombre.webp" alt="Volto di donna attraversato da ombre di foglie in luce calda." width="684" height="946" loading="lazy">
+          </button>
+          <div class="code__text">
+            <span class="code__n">01</span>
+            <h3>Luce</h3>
+            <p>Luce calda e radente, ombre che disegnano. È il primo gesto di selezione: ciò che è illuminato è stato scelto.</p>
+          </div>
+        </li>
+        <li class="code" data-reveal>
+          <button type="button" class="code__media" data-viewer data-caption="Gesto: una donna in trench attraversa la strada. Reference esterna dal moodboard allegato (immagine segnalata come modificata con IA).">
+            <img src="assets/img/moodboard/mb-trench.webp" alt="Donna in trench che cammina in una strada affollata, con movimento sfocato." width="579" height="747" loading="lazy">
+          </button>
+          <div class="code__text">
+            <span class="code__n">02</span>
+            <h3>Gesto</h3>
+            <p>Corpi colti mentre camminano, si voltano, sistemano un bavero. Il movimento mostra come cade un tessuto.</p>
+          </div>
+        </li>
+        <li class="code" data-reveal>
+          <button type="button" class="code__media" data-viewer data-caption="Dettaglio: forbici che tagliano un tessuto scuro, con la scritta «you have to consider silhouette». Reference esterna.">
+            <img src="assets/img/reference/ins-taglio.webp" alt="Mani che tagliano un tessuto scuro con le forbici." width="596" height="1000" loading="lazy">
+          </button>
+          <div class="code__text">
+            <span class="code__n">03</span>
+            <h3>Dettaglio</h3>
+            <p>Rovesci, cuciture, orli, etichette. Il dettaglio è la prova di una competenza.</p>
+          </div>
+        </li>
+        <li class="code code--tall" data-reveal>
+          <button type="button" class="code__media" data-viewer data-caption="Composizione: ritratto in poltrona tra quadri antichi. Reference esterna dal moodboard allegato (immagine segnalata come modificata con IA).">
+            <img src="assets/img/moodboard/mb-poltrona-quadri.webp" alt="Donna in camicia bianca seduta in poltrona davanti a una parete di quadri." width="611" height="845" loading="lazy">
+          </button>
+          <div class="code__text">
+            <span class="code__n">04</span>
+            <h3>Composizione</h3>
+            <p>Il salotto come set: una persona in un interno, tra quadri, poltrone e libri. Mai un capo sospeso nel vuoto.</p>
+          </div>
+        </li>
+        <li class="code" data-reveal>
+          <button type="button" class="code__media" data-viewer data-caption="Materia: una donna piega un capo su una scrivania di legno, in luce calda. Reference esterna.">
+            <img src="assets/img/reference/ins-gesto-luce.webp" alt="Donna che piega un capo su una scrivania di legno vicino a una finestra." width="602" height="1000" loading="lazy">
+          </button>
+          <div class="code__text">
+            <span class="code__n">05</span>
+            <h3>Materia</h3>
+            <p>Lana, maglia, legno, carta. Superfici calde e grane visibili: toccare con gli occhi.</p>
+          </div>
+        </li>
+        <li class="code code--accent" data-reveal>
+          <button type="button" class="code__media" data-viewer data-caption="Accento surreale: un cappotto spigato su una seduta di sfere gialle, in riva al mare. Reference esterna dal moodboard allegato.">
+            <img src="assets/img/moodboard/mb-sfere-cappotto.webp" alt="Figura in cappotto spigato seduta su una poltrona di sfere gialle accanto a un vecchio televisore." width="712" height="1000" loading="lazy">
+          </button>
+          <div class="code__text">
+            <span class="code__n">06</span>
+            <h3>Accento surreale</h3>
+            <p>Un solo elemento fuori posto accanto a un capo che resta protagonista. Un accento, mai la regola.</p>
+          </div>
+        </li>
+      </ol>
+
+      <div class="degas">
+        <div class="degas__text" data-reveal>
+          <p class="label">La lezione di Degas</p>
+          <p class="statement statement--sm">Il dietro le quinte, il corpo che si prepara, l'inquadratura che taglia una figura a metà. Da Degas prendiamo lo sguardo che osserva senza mettere in posa.</p>
+        </div>
+        <button type="button" class="degas__img degas__img--a" data-viewer data-caption="Edgar Degas, ballerina (dettaglio). Reference d'arte.">
+          <img src="assets/img/reference/ins-degas-ballerina.webp" alt="Dettaglio pittorico di una ballerina di Degas che si sistema il tutù." width="617" height="1000" loading="lazy">
+        </button>
+        <button type="button" class="degas__img degas__img--b" data-viewer data-caption="Edgar Degas, ballerine durante una lezione. Reference d'arte.">
+          <img src="assets/img/reference/ins-degas-lezione.webp" alt="Dipinto di Degas con ballerine alla sbarra in una sala." width="667" height="753" loading="lazy">
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 06 LA BOUTIQUE ============ -->
+  <section id="boutique" class="sec sec--light boutique-sec" data-theme="light" aria-labelledby="boutique-title">
+    <div class="wrap">
+      <header class="head">
+        <p class="head__index" data-reveal><span class="mark" aria-hidden="true"></span>06 · La boutique, salotto d'arte</p>
+        <div class="head__main">
+          <h2 class="head__title" id="boutique-title" data-reveal>Il salotto c'è già. <em>Va messo in luce.</em></h2>
+        <p class="head__intro" data-reveal>Travi a vista, la scala a chiocciola, i tavoli di legno, la luce che entra dalle vetrine: lo spazio di via Menarola ha già il calore di una casa. La direzione è conservarlo, dargli una regia e creare al suo centro un vero salotto: il luogo in cui fermarsi davanti a un outfit come davanti a un'opera.</p>
+              </div>
+      </header>
+
+      <ul class="principles" aria-label="Sei principi per lo spazio">
+        <li data-reveal><span>Conservare</span> architettura, arredi e accoglienza.</li>
+        <li data-reveal><span>Accendere</span> luce calda e d'accento sui capi.</li>
+        <li data-reveal><span>Respirare</span> meno capi per stender, più spazio tra le cose.</li>
+        <li data-reveal><span>Sedersi</span> un vero salotto, per guardare un outfit come un'opera.</li>
+        <li data-reveal><span>Comporre</span> pochi look e un pezzo-eroe alla volta.</li>
+        <li data-reveal><span>Firmare</span> una nota di Monica accanto al capo scelto.</li>
+      </ul>
+
+      <!-- Il salotto, davvero -->
+      <div class="salotto" id="salotto">
+        <div class="salotto__text">
+          <p class="label" data-reveal><span class="mark" aria-hidden="true"></span>La proposta centrale</p>
+          <h3 class="salotto__title" data-reveal>Un vero salotto, <em>dentro la boutique.</em></h3>
+          <p class="salotto__lead" data-reveal>In una galleria ci si siede davanti a un'opera e la si guarda con calma. Da MC.ALL l'opera è un outfit, composto da Monica.</p>
+          <p class="body" data-reveal>Lo spazio ha già il calore di una casa, ma manca il luogo in cui fermarsi. La proposta è creare un angolo salotto nel punto in cui oggi si trova la cassapanca, che può trovare posto in un altro angolo dello store. Due sedute, un tavolino, una luce dedicata e, di fronte, il look scelto da Monica presentato come un quadro: il salotto d'arte smette di essere un'immagine e diventa un luogo reale.</p>
+
+          <ol class="salotto__steps">
+            <li data-reveal><b>Sedersi</b> la cliente si accomoda e ha il tempo di guardare, senza fretta.</li>
+            <li data-reveal><b>Osservare</b> l'outfit è esposto come un'opera: un supporto dedicato, una luce, due righe scritte da Monica.</li>
+            <li data-reveal><b>Conversare</b> è qui che Monica racconta il capo, i materiali, la vestibilità: il luogo della consulenza.</li>
+          </ol>
+
+          <div class="facade__switch" role="group" aria-label="Confronto angolo salotto">
+            <button type="button" class="is-active" aria-pressed="true" data-salotto="oggi">Oggi</button>
+            <button type="button" aria-pressed="false" data-salotto="ipotesi">Ipotesi</button>
+          </div>
+          <p class="caveat">Posizione, misure e arredi sono da definire insieme a Monica e da verificare nello spazio reale.</p>
+        </div>
+
+        <figure class="salotto__visual" data-state="oggi" data-reveal>
+          <div class="salotto__frame">
+            <img src="assets/img/boutique/cassapanca-vetrina.webp" alt="L'angolo di MC.ALL dove oggi si trova la cassapanca in legno, accanto alla vetrina velata e agli scaffali di maglieria." width="1012" height="1800" loading="lazy">
+            <svg class="salotto__overlay" viewBox="0 0 1012 1800" preserveAspectRatio="none" aria-hidden="true">
+              <polygon class="fx fx--under" pathLength="1" points="40,1690 960,1690 860,1160 150,1160"/>
+              <rect class="fx fx--under fx--frame" pathLength="1" x="610" y="190" width="330" height="400"/>
+              <line class="fx fx--under fx--thin" pathLength="1" x1="380" y1="1040" x2="880" y2="900"/>
+              <polygon class="fx" pathLength="1" points="40,1690 960,1690 860,1160 150,1160"/>
+              <rect class="fx fx--frame-top" pathLength="1" x="610" y="190" width="330" height="400"/>
+              <rect class="fx fx--thin" pathLength="1" x="632" y="212" width="286" height="356"/>
+              <line class="fx fx--thin" pathLength="1" x1="380" y1="1040" x2="880" y2="900"/>
+              <polyline class="fx fx--thin" pathLength="1" points="850,880 880,900 852,925"/>
+            </svg>
+            <span class="schema-tag" style="--tx:58%;--ty:34%">L'outfit di Monica, come un'opera</span>
+            <span class="schema-tag" style="--tx:6%;--ty:61%">Il salotto: due sedute, un tavolino, una luce</span>
+            <span class="schema-tag" style="--tx:44%;--ty:46%">La cassapanca trova un altro posto</span>
+          </div>
+          <figcaption>Ipotesi illustrata con uno schema grafico sovrapposto alla foto reale: non è un rendering.</figcaption>
+        </figure>
+
+      </div>
+
+      <div class="salotto__refs">
+          <p class="label">Dal moodboard</p>
+          <div class="salotto__strip">
+            <button type="button" class="ref-img" data-viewer data-caption="Una panca davanti alla Gioconda: sedersi davanti all'opera. Reference esterna dal moodboard." data-reveal>
+              <img src="assets/img/moodboard/mb-galleria.webp" alt="Donna seduta su una panca di museo davanti alla Gioconda." width="622" height="700" loading="lazy">
+              <span>Seduti davanti all'opera</span>
+            </button>
+            <button type="button" class="ref-img" data-viewer data-caption="Ritratto in poltrona tra quadri antichi. Reference esterna dal moodboard." data-reveal>
+              <img src="assets/img/moodboard/mb-poltrona-quadri.webp" alt="Donna in camicia bianca in poltrona davanti a una parete di quadri." width="611" height="845" loading="lazy">
+              <span>La poltrona tra i quadri</span>
+            </button>
+            <button type="button" class="ref-img" data-viewer data-caption="Divano in luce calda. Reference esterna dal moodboard." data-reveal>
+              <img src="assets/img/moodboard/mb-salotto-luce.webp" alt="Donna in camicia bianca su un divano, illuminata da luce calda." width="463" height="757" loading="lazy">
+              <span>La luce del salotto</span>
+            </button>
+          </div>
+        </div>
+
+      <!-- Foto annotate -->
+      <div class="rooms">
+        <figure class="room room--wide" data-reveal>
+          <div class="room__frame">
+            <img src="assets/img/boutique/sala-tavolo.webp" alt="Sala principale di MC.ALL: un lungo tavolo di legno con maglieria piegata, stender di cappotti e una vetrina velata da una tenda di lino." width="1012" height="1800" loading="lazy">
+            <button type="button" class="pin" style="--x:55%;--y:45%" aria-describedby="note-1">1</button>
+            <button type="button" class="pin" style="--x:18%;--y:28%" aria-describedby="note-2">2</button>
+            <button type="button" class="pin" style="--x:78%;--y:20%" aria-describedby="note-3">3</button>
+          </div>
+          <figcaption>
+            <p class="room__title">La sala del tavolo</p>
+            <ol class="notes">
+              <li id="note-1"><b>1</b> Il tavolo antico come piano di composizione: un look completo per volta, piegato e accostato con cura.</li>
+              <li id="note-2"><b>2</b> Luce d'accento calda sugli stender: i capi scuri chiedono più luce per mostrare la loro materia.</li>
+              <li id="note-3"><b>3</b> La vetrina vista da dentro: al posto della tenda di lino, un quadro che incornicia il capo scelto (vedi la facciata).</li>
+            </ol>
+          </figcaption>
+        </figure>
+
+        <figure class="room" data-reveal>
+          <div class="room__frame">
+            <img src="assets/img/boutique/scala.webp" alt="La scala a chiocciola in legno di MC.ALL con una vetrinetta di maglieria e uno stender." width="1012" height="1800" loading="lazy">
+            <button type="button" class="pin" style="--x:45%;--y:42%" aria-describedby="note-4">4</button>
+            <button type="button" class="pin" style="--x:76%;--y:57%" aria-describedby="note-5">5</button>
+          </div>
+          <figcaption>
+            <p class="room__title">La scala</p>
+            <ol class="notes" start="4">
+              <li id="note-4"><b>4</b> La scala come quinta: il luogo di un pezzo-eroe e dei ritratti.</li>
+              <li id="note-5"><b>5</b> La vetrinetta di maglieria, da leggere come una collezione: pochi colori, in sequenza.</li>
+            </ol>
+          </figcaption>
+        </figure>
+
+        <figure class="room" data-reveal>
+          <div class="room__frame">
+            <img src="assets/img/boutique/stender-specchio.webp" alt="Stender di giacche e cappotti nei toni del marrone davanti a uno specchio e a una porta finestra." width="1012" height="1800" loading="lazy">
+            <button type="button" class="pin" style="--x:70%;--y:42%" aria-describedby="note-6">6</button>
+            <button type="button" class="pin" style="--x:46%;--y:30%" aria-describedby="note-7">7</button>
+          </div>
+          <figcaption>
+            <p class="room__title">Stender e specchio</p>
+            <ol class="notes" start="6">
+              <li id="note-6"><b>6</b> Meno capi per stender, con le taglie necessarie: la selezione si legge nello spazio tra un capo e l'altro.</li>
+              <li id="note-7"><b>7</b> Lo specchio come cornice: il punto in cui la cliente si vede dentro il salotto.</li>
+            </ol>
+          </figcaption>
+        </figure>
+
+        <figure class="room" data-reveal>
+          <div class="room__frame">
+            <img src="assets/img/boutique/cassapanca-vetrina.webp" alt="Una cassapanca antica in legno al centro della sala, con oggetti di lavoro sopra, e scaffali in metallo con maglieria piegata." width="1012" height="1800" loading="lazy">
+            <button type="button" class="pin" style="--x:38%;--y:55%" aria-describedby="note-8">8</button>
+            <button type="button" class="pin" style="--x:78%;--y:40%" aria-describedby="note-9">9</button>
+          </div>
+          <figcaption>
+            <p class="room__title">Dove nasce il salotto</p>
+            <ol class="notes" start="8">
+              <li id="note-8"><b>8</b> Qui può nascere l'angolo salotto. La cassapanca, un oggetto bellissimo, si sposta in un altro punto dello store e diventa il piedistallo di un accessorio.</li>
+              <li id="note-9"><b>9</b> Gli strumenti di lavoro trovano posto fuori dalla scena, così l'attenzione resta sui capi.</li>
+            </ol>
+          </figcaption>
+        </figure>
+      </div>
+
+      <!-- Capi e opere, insieme -->
+      <div class="art-mix">
+        <figure class="art-mix__img" data-reveal>
+          <button type="button" class="art-mix__frame" data-viewer data-caption="Reference: ME+EM, allestimento in boutique. Tre look completi su supporti singoli, due fotografie incorniciate e una seduta.">
+            <img src="assets/img/reference/memem-allestimento.webp" alt="Tre look completi su supporti singoli davanti a una parete chiara, con due fotografie incorniciate in alto e una seduta di lato." width="816" height="1078" loading="lazy">
+          </button>
+          <figcaption>Reference · ME+EM, allestimento in boutique</figcaption>
+        </figure>
+        <div class="art-mix__text">
+          <p class="label" data-reveal><span class="mark" aria-hidden="true"></span>Tra un capo e l'altro, l'arte</p>
+          <h3 class="display display--md" data-reveal>Capi e opere, <em>insieme.</em></h3>
+          <p class="art-mix__lead" data-reveal>Come in una galleria, i capi possono alternarsi a piccoli quadri, statuette, pezzi d'arte.</p>
+          <p class="body" data-reveal>Una fotografia incorniciata sopra uno stender, una piccola scultura accanto a una maglia piegata, un oggetto trovato da Monica in viaggio. L'arte non decora: dà ritmo all'esposizione, crea pause tra un look e l'altro e ricorda che ogni capo è stato scelto, come si sceglie un'opera.</p>
+          <ul class="art-mix__list" data-reveal>
+            <li>Look completi su supporti singoli, non capi in fila.</li>
+            <li>Quadri e fotografie appesi all'altezza dello sguardo, sopra i capi.</li>
+            <li>Una seduta accanto, perché chi guarda possa fermarsi.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Vetrine -->
+      <div class="windows">
+        <div class="windows__text" data-reveal>
+          <p class="label">Le vetrine</p>
+          <h3 class="display display--md">Dentro la <em>cornice.</em></h3>
+          <p class="body">La vetrina diventa un quadro: un capo speciale, una luce dedicata e una breve nota firmata da Monica che dica perché è lì. Lo stesso capo, la stessa scena, ritornano sui canali social.</p>
+        </div>
+        <div class="windows__refs">
+          <button type="button" class="ref-img" data-viewer data-caption="Vetrina con capi appesi accanto a un lungo cartiglio di testo. Reference esterna." data-reveal>
+            <img src="assets/img/reference/ins-vetrina-testo.webp" alt="Capi scuri appesi a un'asta accanto a un lungo cartiglio di testo." width="654" height="902" loading="lazy">
+            <span>Il capo e le sue parole</span>
+          </button>
+          <button type="button" class="ref-img" data-viewer data-caption="Busti e accessori sospesi a corde su fondo blu. Reference esterna." data-reveal>
+            <img src="assets/img/reference/ins-vetrina-sospesa.webp" alt="Busti sartoriali e borse sospesi a corde su fondo blu scuro." width="632" height="954" loading="lazy">
+            <span>Sospendere, non esporre</span>
+          </button>
+          <button type="button" class="ref-img" data-viewer data-caption="Vetrina con un ramo scultoreo che regge una borsa. Reference esterna." data-reveal>
+            <img src="assets/img/reference/ins-vetrina-ramo.webp" alt="Vetrina bianca con un ramo secco che sostiene una piccola borsa." width="566" height="942" loading="lazy">
+            <span>Un solo oggetto, tanto spazio</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Facciata -->
+      <div class="facade" id="facciata">
+        <div class="facade__text" data-reveal>
+          <p class="label">La facciata · ipotesi creativa</p>
+          <h3 class="display display--md">Una finestra <em>sull'arte.</em></h3>
+          <p class="body">Dalla strada, un elemento luminoso e scultoreo accompagna lo sguardo verso la vetrina e accende il capo scelto da Monica. Dietro il vetro, al posto della tenda di lino, un quadro: una cornice che trasforma il capo in un'opera da guardare. In vetrina il capo può anche alternarsi a piccoli quadri, statuette, pezzi d'arte, come in una galleria. Chi passa in via Menarola non vede un negozio, vede una finestra sull'arte.</p>
+          <p class="body facade__note">Davanti all'ingresso, al posto della pianta, un elemento che di solito lì non c'è: una scultura, una piantana luminosa, un oggetto che crea spaesamento e ferma chi passa. È il tocco surreale della direzione, misurato e riconoscibile.</p>
+          <p class="body facade__note">Il muro color intonaco, la pietra e i serramenti in legno restano come sono: la luce e la cornice aggiungono un segno, non cambiano la casa.</p>
+
+          <div class="facade__switch" role="group" aria-label="Confronto facciata">
+            <button type="button" class="is-active" aria-pressed="true" data-facade="oggi">Oggi</button>
+            <button type="button" aria-pressed="false" data-facade="ipotesi">Ipotesi</button>
+          </div>
+
+          <p class="caveat">Gli interventi su facciata, vetrine e arredi sono una direzione da approfondire con Monica e da verificare per fattibilità, sicurezza e regole del luogo. Non costituiscono un progetto esecutivo.</p>
+        </div>
+
+        <figure class="facade__visual" data-state="oggi" data-reveal>
+          <div class="facade__frame">
+            <img src="assets/img/boutique/facciata-vetrina.webp" alt="La facciata di MC.ALL al civico 18 di via Menarola, con la porta in legno e una vetrina illuminata." width="1012" height="1800" loading="lazy">
+            <svg class="facade__overlay" viewBox="0 0 1012 1800" preserveAspectRatio="none" aria-hidden="true">
+              <path class="fx-wall" fill-rule="evenodd" d="M561,660 h374 v390 h-374 Z M600,745 v290 h200 v-290 Z"/>
+              <path class="fx-wall" d="M296,955 h456 v495 h-456 Z"/>
+              <line class="fx fx--under" pathLength="1" x1="700" y1="402" x2="800" y2="402"/>
+              <line class="fx fx--under" pathLength="1" x1="700" y1="402" x2="541" y2="641"/>
+              <line class="fx fx--under" pathLength="1" x1="800" y1="402" x2="951" y2="641"/>
+              <rect class="fx fx--under" pathLength="1" x="541" y="641" width="410" height="428"/>
+              <rect class="fx fx--under fx--frame" pathLength="1" x="600" y="745" width="200" height="290"/>
+              <line class="fx" pathLength="1" x1="700" y1="402" x2="800" y2="402"/>
+              <line class="fx" pathLength="1" x1="700" y1="402" x2="541" y2="641"/>
+              <line class="fx" pathLength="1" x1="800" y1="402" x2="951" y2="641"/>
+              <rect class="fx" pathLength="1" x="541" y="641" width="410" height="428"/>
+              <rect class="fx fx--frame-top" pathLength="1" x="600" y="745" width="200" height="290"/>
+              <rect class="fx fx--thin" pathLength="1" x="614" y="759" width="172" height="262"/>
+              <g class="fx-rays fx-rays--under">
+                <line class="fx fx--under fx--ray" pathLength="1" x1="715" y1="404" x2="622" y2="742"/>
+                <line class="fx fx--under fx--ray" pathLength="1" x1="735" y1="404" x2="662" y2="742"/>
+                <line class="fx fx--under fx--ray" pathLength="1" x1="750" y1="404" x2="700" y2="742"/>
+                <line class="fx fx--under fx--ray" pathLength="1" x1="765" y1="404" x2="738" y2="742"/>
+                <line class="fx fx--under fx--ray" pathLength="1" x1="785" y1="404" x2="778" y2="742"/>
+              </g>
+              <g class="fx-rays">
+                <line class="fx fx--ray" pathLength="1" x1="715" y1="404" x2="622" y2="742"/>
+                <line class="fx fx--ray" pathLength="1" x1="735" y1="404" x2="662" y2="742"/>
+                <line class="fx fx--ray" pathLength="1" x1="750" y1="404" x2="700" y2="742"/>
+                <line class="fx fx--ray" pathLength="1" x1="765" y1="404" x2="738" y2="742"/>
+                <line class="fx fx--ray" pathLength="1" x1="785" y1="404" x2="778" y2="742"/>
+              </g>
+              <rect class="fx fx--under" pathLength="1" x="452" y="1395" width="144" height="46"/>
+              <line class="fx fx--under" pathLength="1" x1="524" y1="1395" x2="524" y2="1142"/>
+              <circle class="fx fx--under" pathLength="1" cx="524" cy="1062" r="78"/>
+              <rect class="fx" pathLength="1" x="452" y="1395" width="144" height="46"/>
+              <line class="fx" pathLength="1" x1="524" y1="1395" x2="524" y2="1142"/>
+              <circle class="fx fx--globe" pathLength="1" cx="524" cy="1062" r="78"/>
+              <g class="fx-glow">
+                <line class="fx fx--ray" pathLength="1" x1="524" y1="964" x2="524" y2="930"/>
+                <line class="fx fx--ray" pathLength="1" x1="593" y1="993" x2="617" y2="969"/>
+                <line class="fx fx--ray" pathLength="1" x1="622" y1="1062" x2="656" y2="1062"/>
+                <line class="fx fx--ray" pathLength="1" x1="455" y1="993" x2="431" y2="969"/>
+                <line class="fx fx--ray" pathLength="1" x1="426" y1="1062" x2="392" y2="1062"/>
+                <line class="fx fx--ray" pathLength="1" x1="593" y1="1131" x2="617" y2="1155"/>
+                <line class="fx fx--ray" pathLength="1" x1="455" y1="1131" x2="431" y2="1155"/>
+              </g>
+            </svg>
+            <span class="schema-tag schema-tag--late" style="--tx:62%;--ty:21%">Una luce sul capo</span>
+            <span class="schema-tag schema-tag--late" style="--tx:51%;--ty:60.5%">Un quadro al posto della tenda di lino</span>
+            <span class="schema-tag schema-tag--late" style="--tx:24%;--ty:81.5%">Al posto della pianta: una scultura luminosa, un elemento fuori posto</span>
+          </div>
+          <figcaption>Ipotesi illustrata con uno schema grafico sovrapposto alla foto reale: non è un rendering.</figcaption>
+        </figure>
+      </div>
+
+      <div class="facade__refs">
+          <p class="label">Spunti per la facciata</p>
+          <div class="facade__strip">
+            <button type="button" class="ref-img ref-img--sm" data-viewer data-caption="Facciata con cornici luminose di forme diverse. Reference esterna." data-reveal>
+              <img src="assets/img/reference/ins-facciata-cornici.webp" alt="Facciata bianca con finestre incorniciate da luci calde." width="628" height="954" loading="lazy">
+              <span>Cornici di luce</span>
+            </button>
+            <button type="button" class="ref-img ref-img--sm" data-viewer data-caption="Un cono di luce gialla dipinto dal lampione fino al marciapiede. Reference esterna." data-reveal>
+              <img src="assets/img/reference/ins-cono-luce.webp" alt="Un fascio di luce gialla dipinto su facciata e marciapiede." width="566" height="1000" loading="lazy">
+              <span>Il fascio come segno</span>
+            </button>
+            <button type="button" class="ref-img ref-img--sm" data-viewer data-caption="Vetrina con un'apertura circolare illuminata. Reference esterna." data-reveal>
+              <img src="assets/img/reference/ins-vetrina-cerchio.webp" alt="Vetrina scura con un oblò circolare pieno di lampade accese." width="650" height="650" loading="lazy">
+              <span>Un oblò luminoso</span>
+            </button>
+            <button type="button" class="ref-img ref-img--sm" data-viewer data-caption="Applique sopra una finestrella con tenda, su muro rosso. Reference esterna." data-reveal>
+              <img src="assets/img/reference/ins-lampada.webp" alt="Applique sopra una piccola finestra con tenda su un muro rosso." width="622" height="756" loading="lazy">
+              <span>La lampada come invito</span>
+            </button>
+            <button type="button" class="ref-img ref-img--sm" data-viewer data-caption="Sedie bianche sospese sulla facciata di un edificio storico. Reference esterna." data-reveal>
+              <img src="assets/img/reference/ins-sedie-sospese.webp" alt="Sedie bianche fissate in volo sulla facciata in pietra di un edificio antico." width="552" height="912" loading="lazy">
+              <span>Lo straniamento in pietra</span>
+            </button>
+          </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 07 I CONTENUTI ============ -->
+  <section id="contenuti" class="sec sec--dark contenuti-sec" data-theme="dark" aria-labelledby="contenuti-title">
+    <div class="wrap">
+      <header class="head">
+        <p class="head__index" data-reveal><span class="mark" aria-hidden="true"></span>07 · I contenuti</p>
+        <div class="head__main">
+          <h2 class="head__title" id="contenuti-title" data-reveal>Cinque rubriche, <em>una sola voce.</em></h2>
+        <p class="head__intro" data-reveal>Ogni rubrica ha un compito: mostrare un capo, spiegarlo, farlo muovere, viverlo insieme, incorniciarlo. Alternate, tengono insieme prodotto, atmosfera e relazione.</p>
+              </div>
+      </header>
+
+      <p class="band-label" data-reveal><span>Cinque rubriche</span><span>01 — 05</span></p>
+      <div class="areas areas--rubrics">
+        <article class="area area--half">
+          <button type="button" class="area__img" data-viewer data-reveal="wipe" data-caption="La giacca in vetrina da MC.ALL, sotto due faretti.">
+            <img src="assets/img/boutique/vetrina-giacca.webp" alt="Una giacca color tabacco appesa nella vetrina di MC.ALL, illuminata da due faretti." width="478" height="573" loading="lazy">
+          </button>
+          <div class="area__cap" data-reveal>
+            <div>
+              <p class="area__kicker">La vetrina di via Menarola, MC.ALL</p>
+              <h3>Il capo in luce</h3>
+              <p>Un pezzo scelto, isolato nella luce, e il motivo per cui è entrato in boutique, raccontato in poche righe firmate da Monica.</p>
+              <ul class="chips"><li>Post singolo</li><li>Carosello</li><li>Still life + testo breve</li></ul>
+            </div>
+            <span class="area__n" aria-hidden="true">01</span>
+          </div>
+        </article>
+        <article class="area area--half">
+          <button type="button" class="area__img" data-viewer data-reveal="wipe" data-caption="Mani che tagliano un tessuto scuro. Reference esterna.">
+            <img src="assets/img/reference/ins-taglio.webp" alt="Mani che tagliano un tessuto scuro con le forbici." width="596" height="1000" loading="lazy">
+          </button>
+          <div class="area__cap" data-reveal>
+            <div>
+              <p class="area__kicker">Reference · il gesto della sartoria</p>
+              <h3>Lo sguardo di Monica</h3>
+              <p>Materiali, dettagli, costruzione e vestibilità, spiegati da chi li conosce dall'interno: il rovescio di una giacca, il peso di una maglia, come cade un pantalone. E un consiglio su come portarli.</p>
+              <ul class="chips"><li>Reel parlato</li><li>Carosello di dettagli</li><li>Voce di Monica</li></ul>
+            </div>
+            <span class="area__n" aria-hidden="true">02</span>
+          </div>
+        </article>
+        <article class="area area--quarter">
+          <button type="button" class="area__img" data-viewer data-reveal="wipe" data-caption="Edgar Degas, ballerina (dettaglio). Reference d'arte.">
+            <img src="assets/img/reference/ins-degas-ballerina.webp" alt="Dettaglio pittorico di una ballerina di Degas che si sistema il tutù." width="617" height="1000" loading="lazy">
+          </button>
+          <div class="area__cap" data-reveal>
+            <div>
+              <p class="area__kicker">Reference · Edgar Degas</p>
+              <h3>In movimento</h3>
+              <p>Gesti non posati, ispirati a Degas: camminare, voltarsi, sistemare un bavero, salire la scala. Il capo resta sempre leggibile.</p>
+              <ul class="chips"><li>Reel breve</li><li>Sequenza fotografica</li><li>Backstage</li></ul>
+            </div>
+            <span class="area__n" aria-hidden="true">03</span>
+          </div>
+        </article>
+        <article class="area area--quarter">
+          <button type="button" class="area__img" data-viewer data-reveal="wipe" data-caption="La sala del tavolo di MC.ALL.">
+            <img src="assets/img/boutique/sala-tavolo.webp" alt="La sala del tavolo di MC.ALL con maglieria piegata e stender." width="1012" height="1800" loading="lazy">
+          </button>
+          <div class="area__cap" data-reveal>
+            <div>
+              <p class="area__kicker">La sala del tavolo, MC.ALL</p>
+              <h3>Il salotto aperto</h3>
+              <p>Lo styling, la prova, il dialogo con le clienti: il servizio che oggi si scopre solo entrando. Sempre con il consenso di chi viene ripreso.</p>
+              <ul class="chips"><li>Stories</li><li>Reel di backstage</li><li>Carosello di styling</li></ul>
+            </div>
+            <span class="area__n" aria-hidden="true">04</span>
+          </div>
+        </article>
+        <article class="area area--half">
+          <button type="button" class="area__img" data-viewer data-reveal="wipe" data-caption="La facciata di MC.ALL in via Menarola.">
+            <img src="assets/img/boutique/facciata-ampia.webp" alt="La facciata di MC.ALL con la porta in legno e le due vetrine." width="1800" height="1013" loading="lazy">
+          </button>
+          <div class="area__cap" data-reveal>
+            <div>
+              <p class="area__kicker">Via Menarola 18, Bassano del Grappa</p>
+              <h3>Dentro la cornice</h3>
+              <p>Il capo in vetrina, raccontato anche online: chi passa in via Menarola e chi scorre il profilo vede la stessa scena, con la stessa luce.</p>
+              <ul class="chips"><li>Post</li><li>Stories di allestimento</li><li>Rimando alla vetrina</li></ul>
+            </div>
+            <span class="area__n" aria-hidden="true">05</span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 08 REFERENCE SOCIAL ============ -->
+  <section id="reference" class="sec sec--light reference-sec" data-theme="light" aria-labelledby="reference-title">
+    <div class="wrap">
+      <header class="head">
+        <p class="head__index" data-reveal><span class="mark" aria-hidden="true"></span>08 · Reference social</p>
+        <div class="head__main">
+          <h2 class="head__title" id="reference-title" data-reveal>Che cosa prendiamo, <em>e da chi.</em></h2>
+        <p class="head__intro" data-reveal>Pochi esempi, scelti per spiegare i format: non da copiare, ma da tradurre nel linguaggio di MC.ALL. Ogni link apre il contenuto originale in una nuova scheda; l'anteprima usa l'embed ufficiale di Instagram e si carica solo su richiesta.</p>
+        <p class="head__credit" data-reveal>Link verificati il 15 ottobre 2026 tramite le pagine pubbliche di Instagram.</p>
+              </div>
+      </header>
+
+      <!-- Punto di partenza -->
+      <div class="refgroup">
+        <div class="refgroup__head" data-reveal>
+          <p class="refgroup__kicker">Punto di partenza</p>
+          <h3>MC.ALL oggi</h3>
+          <p>Il profilo esiste e ha già un tono: la direzione parte da qui, non da zero.</p>
+        </div>
+        <div class="refcards">
+          <article class="refcard" data-reveal>
+            <p class="refcard__meta"><span>@mc.all_shop</span><span>Profilo</span></p>
+            <p class="refcard__what">Profilo della boutique, con indirizzo di via Menarola e contatto telefonico in bio.</p>
+            <dl>
+              <dt>Cosa teniamo</dt><dd>Un tono già affettuoso e un'attenzione costante alla maglieria e ai colori.</dd>
+              <dt>Per MC.ALL</dt><dd>La base su cui costruire le cinque rubriche e una griglia riconoscibile.</dd>
+            </dl>
+            <a class="refcard__link" href="https://www.instagram.com/mc.all_shop/" target="_blank" rel="noopener noreferrer">Apri il profilo su Instagram <span aria-hidden="true">↗</span><span class="sr-only"> (si apre in una nuova scheda)</span></a>
+          </article>
+          <article class="refcard" data-reveal data-embed="p/DH2kk3rqa0J">
+            <p class="refcard__meta"><span>@mc.all_shop</span><span>Post fissato</span></p>
+            <p class="refcard__what">Il testo di presentazione della boutique, che parla di ricerca, femminilità, tessuti da toccare e capi da scoprire.</p>
+            <dl>
+              <dt>Cosa teniamo</dt><dd>Le parole giuste ci sono già: scoperta, tessuti, dettagli.</dd>
+              <dt>Per MC.ALL</dt><dd>Trasformarle in immagini coerenti e in una voce firmata da Monica.</dd>
+            </dl>
+            <a class="refcard__link" href="https://www.instagram.com/p/DH2kk3rqa0J/" target="_blank" rel="noopener noreferrer">Apri il post su Instagram <span aria-hidden="true">↗</span><span class="sr-only"> (si apre in una nuova scheda)</span></a>
+          </article>
+          <article class="refcard" data-reveal data-embed="p/Dd3tVyVqC11">
+            <p class="refcard__meta"><span>@mc.all_shop</span><span>Post</span></p>
+            <p class="refcard__what">Un post dedicato a Hache, che descrive la palette della stagione e il mix di colori e filati.</p>
+            <dl>
+              <dt>Cosa teniamo</dt><dd>È già, in piccolo, «Lo sguardo di Monica»: un capo spiegato attraverso colori e materia.</dd>
+              <dt>Per MC.ALL</dt><dd>Dargli continuità, una luce costante e la voce di Monica in prima persona.</dd>
+            </dl>
+            <a class="refcard__link" href="https://www.instagram.com/p/Dd3tVyVqC11/" target="_blank" rel="noopener noreferrer">Apri il post su Instagram <span aria-hidden="true">↗</span><span class="sr-only"> (si apre in una nuova scheda)</span></a>
+          </article>
+        </div>
+      </div>
+
+      <!-- Il capo in luce -->
+      <div class="refgroup">
+        <div class="refgroup__head" data-reveal>
+          <p class="refgroup__kicker">Rubrica 01</p>
+          <h3>Il capo in luce</h3>
+          <p>Il prodotto da solo, ma con una ragione.</p>
+        </div>
+        <div class="refcards">
+          <article class="refcard" data-reveal data-embed="p/Ddn0ZCVnApf">
+            <p class="refcard__meta"><span>@arketofficial</span><span>Post</span></p>
+            <p class="refcard__what">La presentazione della linea denim per l'autunno 2026: capi isolati, nomi dei modelli, poche parole.</p>
+            <dl>
+              <dt>Cosa prendiamo</dt><dd>La sobrietà: un capo in primo piano e una didascalia essenziale e precisa.</dd>
+              <dt>Per MC.ALL</dt><dd>Il capo scelto da Monica, in luce, con tre righe sul perché.</dd>
+            </dl>
+            <a class="refcard__link" href="https://www.instagram.com/p/Ddn0ZCVnApf/" target="_blank" rel="noopener noreferrer">Apri il post su Instagram <span aria-hidden="true">↗</span><span class="sr-only"> (si apre in una nuova scheda)</span></a>
+          </article>
+          <article class="refcard" data-reveal data-embed="reel/DcA7KazkXiH">
+            <p class="refcard__meta"><span>@arketofficial</span><span>Reel</span></p>
+            <p class="refcard__what">Un piccolo still life di fermagli per capelli su un tavolo di legno, con un breve dialogo ironico in sovrimpressione.</p>
+            <dl>
+              <dt>Cosa prendiamo</dt><dd>L'oggetto come personaggio e una frase che sorride.</dd>
+              <dt>Per MC.ALL</dt><dd>Un accessorio o un dettaglio sul tavolo antico, con una battuta di Monica.</dd>
+            </dl>
+            <a class="refcard__link" href="https://www.instagram.com/reel/DcA7KazkXiH/" target="_blank" rel="noopener noreferrer">Apri il reel su Instagram <span aria-hidden="true">↗</span><span class="sr-only"> (si apre in una nuova scheda)</span></a>
+          </article>
+        </div>
+      </div>
+
+      <!-- Lo sguardo di Monica -->
+      <div class="refgroup">
+        <div class="refgroup__head" data-reveal>
+          <p class="refgroup__kicker">Rubrica 02</p>
+          <h3>Lo sguardo di Monica</h3>
+          <p>La competenza come contenuto.</p>
+        </div>
+        <div class="refcards">
+          <article class="refcard" data-reveal data-embed="reel/DdjTuo2Fd92">
+            <p class="refcard__meta"><span>@arketofficial</span><span>Reel</span></p>
+            <p class="refcard__what">Un incontro con una denim expert e designer, che racconta i nuovi modelli della stagione.</p>
+            <dl>
+              <dt>Cosa prendiamo</dt><dd>Chi conosce il prodotto lo spiega, con parole semplici e dettagli in primo piano.</dd>
+              <dt>Per MC.ALL</dt><dd>Monica che spiega un tessuto, una costruzione, una vestibilità.</dd>
+            </dl>
+            <a class="refcard__link" href="https://www.instagram.com/reel/DdjTuo2Fd92/" target="_blank" rel="noopener noreferrer">Apri il reel su Instagram <span aria-hidden="true">↗</span><span class="sr-only"> (si apre in una nuova scheda)</span></a>
+          </article>
+          <article class="refcard" data-reveal data-embed="reel/Dd1g-xnN3G9">
+            <p class="refcard__meta"><span>@q.binh.ng</span><span>Reel</span></p>
+            <p class="refcard__what">Il racconto in prima persona di una serie di t-shirt fatte a mano: base, taglio, stampa, finiture.</p>
+            <dl>
+              <dt>Cosa prendiamo</dt><dd>Il processo raccontato passo per passo, con il tono intimo di un diario.</dd>
+              <dt>Per MC.ALL</dt><dd>La storia di un capo della selezione: com'è fatto e perché è entrato in boutique.</dd>
+            </dl>
+            <a class="refcard__link" href="https://www.instagram.com/reel/Dd1g-xnN3G9/" target="_blank" rel="noopener noreferrer">Apri il reel su Instagram <span aria-hidden="true">↗</span><span class="sr-only"> (si apre in una nuova scheda)</span></a>
+          </article>
+        </div>
+      </div>
+
+      <!-- In movimento -->
+      <div class="refgroup">
+        <div class="refgroup__head" data-reveal>
+          <p class="refgroup__kicker">Rubrica 03</p>
+          <h3>In movimento</h3>
+          <p>Abiti indossati, non esposti.</p>
+        </div>
+        <div class="refcards">
+          <article class="refcard" data-reveal data-embed="reel/Dc1SyC2NtBq">
+            <p class="refcard__meta"><span>@catarinamira × @arketofficial</span><span>Reel · contenuto sponsorizzato</span></p>
+            <p class="refcard__what">Momenti quotidiani senza programma, girati in un interno domestico.</p>
+            <dl>
+              <dt>Cosa prendiamo</dt><dd>Gesti spontanei in una casa: il capo vissuto, non messo in posa.</dd>
+              <dt>Per MC.ALL</dt><dd>Brevi sequenze in boutique o in città, in cui il capo si muove e resta leggibile.</dd>
+            </dl>
+            <a class="refcard__link" href="https://www.instagram.com/reel/Dc1SyC2NtBq/" target="_blank" rel="noopener noreferrer">Apri il reel su Instagram <span aria-hidden="true">↗</span><span class="sr-only"> (si apre in una nuova scheda)</span></a>
+          </article>
+          <article class="refcard refcard--note" data-reveal>
+            <p class="refcard__meta"><span>Edgar Degas</span><span>Reference d'arte</span></p>
+            <p class="refcard__what">Le ballerine colte mentre si preparano, fuori dalla scena: le due opere sono nel moodboard e nel codice visivo.</p>
+            <dl>
+              <dt>Cosa prendiamo</dt><dd>Il gesto non posato e i tagli d'inquadratura inattesi.</dd>
+              <dt>Per MC.ALL</dt><dd>Il backstage di uno styling, una prova, un cappotto indossato al volo.</dd>
+            </dl>
+            <a class="refcard__link" href="#codice">Vai al codice visivo <span aria-hidden="true">↑</span></a>
+          </article>
+        </div>
+      </div>
+
+      <!-- Il salotto aperto -->
+      <div class="refgroup">
+        <div class="refgroup__head" data-reveal>
+          <p class="refgroup__kicker">Rubrica 04</p>
+          <h3>Il salotto aperto</h3>
+          <p>La relazione al centro.</p>
+        </div>
+        <div class="refcards">
+          <article class="refcard" data-reveal data-embed="reel/DdUBvMSEkmU">
+            <p class="refcard__meta"><span>@meandem</span><span>Reel</span></p>
+            <p class="refcard__what">Lo shopping raccontato come un'esperienza condivisa, in compagnia.</p>
+            <dl>
+              <dt>Cosa prendiamo</dt><dd>Chi accompagna conta quanto ciò che si compra.</dd>
+              <dt>Per MC.ALL</dt><dd>La prova e lo styling con Monica, ripresi con il consenso delle clienti.</dd>
+            </dl>
+            <a class="refcard__link" href="https://www.instagram.com/reel/DdUBvMSEkmU/" target="_blank" rel="noopener noreferrer">Apri il reel su Instagram <span aria-hidden="true">↗</span><span class="sr-only"> (si apre in una nuova scheda)</span></a>
+          </article>
+          <article class="refcard" data-reveal data-embed="p/DebZ1ZaAD3_">
+            <p class="refcard__meta"><span>@arketofficial</span><span>Carosello</span></p>
+            <p class="refcard__what">Una giornata a Milano con una curatrice di design, tra i luoghi che frequenta e il suo nuovo studio, vestita con una sua selezione di capi.</p>
+            <dl>
+              <dt>Cosa prendiamo</dt><dd>Una persona, i suoi luoghi, la sua selezione: il diario di uno sguardo.</dd>
+              <dt>Per MC.ALL</dt><dd>Monica tra la boutique e Bassano, insieme alle cose che sceglie.</dd>
+            </dl>
+            <a class="refcard__link" href="https://www.instagram.com/p/DebZ1ZaAD3_/" target="_blank" rel="noopener noreferrer">Apri il post su Instagram <span aria-hidden="true">↗</span><span class="sr-only"> (si apre in una nuova scheda)</span></a>
+          </article>
+        </div>
+      </div>
+
+      <!-- Dentro la cornice -->
+      <div class="refgroup">
+        <div class="refgroup__head" data-reveal>
+          <p class="refgroup__kicker">Rubrica 05</p>
+          <h3>Dentro la cornice</h3>
+          <p>La vetrina come prima inquadratura.</p>
+        </div>
+        <div class="refcards">
+          <article class="refcard" data-reveal data-embed="reel/Dbs_MpTAt0V">
+            <p class="refcard__meta"><span>@meandem</span><span>Reel</span></p>
+            <p class="refcard__what">Strati leggeri della collezione di agosto, in un reel che parte dalla facciata e dalle vetrine del negozio.</p>
+            <dl>
+              <dt>Cosa prendiamo</dt><dd>Il negozio come cornice e prima inquadratura del prodotto.</dd>
+              <dt>Per MC.ALL</dt><dd>La vetrina di via Menarola come copertina del capo in luce.</dd>
+            </dl>
+            <a class="refcard__link" href="https://www.instagram.com/reel/Dbs_MpTAt0V/" target="_blank" rel="noopener noreferrer">Apri il reel su Instagram <span aria-hidden="true">↗</span><span class="sr-only"> (si apre in una nuova scheda)</span></a>
+          </article>
+          <article class="refcard" data-reveal data-embed="reel/DeWzJs3Rkl0">
+            <p class="refcard__meta"><span>@black.ai.butterfly</span><span>Reel</span></p>
+            <p class="refcard__what">Una figura in abito rosso ricamato, con elementi surreali e trucco teatrale, contro un cielo pieno.</p>
+            <dl>
+              <dt>Cosa prendiamo</dt><dd>Lo straniamento come accento: l'abito resta leggibile, la scena diventa memorabile.</dd>
+              <dt>Per MC.ALL</dt><dd>Un solo elemento inatteso in vetrina o in foto, mai più di uno.</dd>
+            </dl>
+            <a class="refcard__link" href="https://www.instagram.com/reel/DeWzJs3Rkl0/" target="_blank" rel="noopener noreferrer">Apri il reel su Instagram <span aria-hidden="true">↗</span><span class="sr-only"> (si apre in una nuova scheda)</span></a>
+          </article>
+        </div>
+      </div>
+
+      <!-- Altre reference -->
+      <details class="more" data-reveal>
+        <summary>Altre reference verificate dal moodboard</summary>
+        <ul class="more__list">
+          <li><a href="https://www.instagram.com/p/Ddl2nJZDXyd/" target="_blank" rel="noopener noreferrer">@arketofficial · Post</a> — motivi ispirati alle piastrelle italiane sulla collezione casa: moda, oggetti e ambienti nello stesso racconto.</li>
+          <li><a href="https://www.instagram.com/arketofficial/" target="_blank" rel="noopener noreferrer">@arketofficial · Profilo</a> — coerenza editoriale tra abbigliamento, casa e vita quotidiana.</li>
+          <li><a href="https://www.instagram.com/q.binh.ng/" target="_blank" rel="noopener noreferrer">@q.binh.ng · Profilo</a> — tono autoriale e intimo, da diario di lavoro.</li>
+          <li><a href="https://www.instagram.com/meandem/" target="_blank" rel="noopener noreferrer">@meandem · Profilo</a> — prodotto leggibile, outfit indossabili, cura del servizio.</li>
+          <li><a href="https://www.instagram.com/black.ai.butterfly/" target="_blank" rel="noopener noreferrer">@black.ai.butterfly · Profilo</a> — immaginario surreale, da usare solo come accento.</li>
+        </ul>
+        <p class="more__note">Tutti i link si aprono in una nuova scheda. I contenuti appartengono ai rispettivi autori e sono citati solo come ispirazione.</p>
+      </details>
+    </div>
+  </section>
+
+
+  <!-- ============ 09 CHIUSURA ============ -->
+  <section id="chiusura" class="sec sec--light closing" data-theme="light" aria-labelledby="chiusura-title">
+    <header class="head">
+      <p class="head__index" data-reveal><span class="mark" aria-hidden="true"></span>09 · In sintesi</p>
+      <div class="head__main">
+        <h2 class="head__title" id="chiusura-title" data-reveal>Una selezione ha valore quando si sente <em>lo sguardo</em> che l'ha composta.</h2>
+      </div>
+    </header>
+
+    <ol class="closing__summary">
+      <li data-reveal><span>01</span>Il salotto di Monica</li>
+      <li data-reveal><span>02</span>La selezione come gesto d'autrice</li>
+      <li data-reveal><span>03</span>I capi messi in luce</li>
+      <li data-reveal><span>04</span>Prodotto, atmosfera e relazione, in alternanza</li>
+    </ol>
+
+    <div class="next">
+      <div class="next__letter" data-reveal>
+        <p class="label">Il prossimo passo</p>
+        <p class="next__lead">Monica, questa è la nostra prima lettura del tuo mondo. Adesso vorrei ascoltarti.</p>
+        <p>Dimmi cosa ti somiglia, cosa senti lontano, cosa cambieresti. Non c'è niente di definitivo: è una base da cui partire, e voglio costruirla con te.</p>
+        <p class="next__sign">Sabrina Viva<br><span>Creative director, MENA MEH!</span></p>
+      </div>
+      <div data-reveal>
+        <p class="label">Le domande che vorrei farti</p>
+        <ol class="next__questions">
+          <li><span><b>Tu e l'obiettivo.</b> Quanto ti senti a tuo agio a comparire in prima persona? Possiamo raccontarti con il volto e la voce, oppure lasciare parlare le tue mani, i tuoi gesti e i capi che scegli.</span></li>
+          <li><span><b>Il primo capo.</b> C'è un pezzo, in questa stagione, che appena l'hai visto hai pensato «questo deve entrare da MC.ALL»? Mi piacerebbe cominciare da lì.</span></li>
+          <li><span><b>Il tuo modo di accompagnare.</b> Raccontami come segui una cliente, dal primo sguardo alla prova: vorrei capire quali momenti possiamo mostrare e quali restano solo vostri.</span></li>
+          <li><span><b>Lo spazio.</b> Fin dove possiamo spingerci? Spostare la cassapanca, portare due sedute, cambiare le luci, ripensare la vetrina.</span></li>
+        </ol>
+      </div>
+    </div>
+
+    <p class="closing__word" aria-hidden="true"><span>MC.ALL</span></p>
+
+    <footer class="sign">
+      <img src="assets/brand/logo-ink.svg" alt="MENA MEH!" width="96" height="64" class="sign__logo">
+      <p>MC.ALL × MENA MEH!<br>Proposta di direzione creativa · Ottobre 2026<br>Luca Bottoni · Sabrina Viva</p>
+      <p class="sign__fine">Documento di lavoro per il confronto con Monica Crestan: non costituisce preventivo né progetto esecutivo. Le reference esterne appartengono ai rispettivi autori e sono mostrate solo come ispirazione.</p>
+      <a href="#apertura" class="sign__top">Torna all'inizio ↑</a>
+    </footer>
+  </section>
+</main>
+
+<!-- ============ VIEWER ============ -->
+<div class="viewer" id="viewer" role="dialog" aria-modal="true" aria-label="Immagine ingrandita" hidden>
+  <button type="button" class="viewer__close" id="viewer-close" aria-label="Chiudi l'immagine">Chiudi ✕</button>
+  <figure class="viewer__fig">
+    <img id="viewer-img" alt="">
+    <figcaption id="viewer-cap"></figcaption>
+  </figure>
+</div>
+
+<script src="script.js" defer></script>
+</body>
+</html>
